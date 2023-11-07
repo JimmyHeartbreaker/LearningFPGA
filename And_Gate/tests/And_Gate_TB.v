@@ -1,6 +1,3 @@
-
-
-// Testbench for LED Blinker
 module And_Gate_TB ();
 
 	reg i_Switch_1,i_Switch_2;
