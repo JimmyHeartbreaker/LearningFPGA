@@ -6,3 +6,7 @@
 **/Clocked_Logic_Implmnt/**
 **/stdout.log
 **/stdout.log.bak
+**/vsim.wlf
+**/dump.vcd
+**/transcript
+**/*.bak
