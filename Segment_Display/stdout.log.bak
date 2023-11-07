@@ -1,0 +1,49 @@
+Running in Lattice mode
+
+
+Starting:    /media/jimmyheartbreaker/UDATA/_APPS/iCEcube2/synpbase/linux_a_64/mbin/synbatch
+Install:     /media/jimmyheartbreaker/UDATA/_APPS/iCEcube2/synpbase
+Hostname:    JamesYogaSlim
+Date:        Tue Nov  7 09:12:15 2023
+Version:     L-2016.09L+ice40
+
+Arguments:   -product synplify_pro -batch Segment_Display_syn.prj
+ProductType: synplify_pro
+
+
+
+
+
+log file: "/media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/Segment_Display/Segment_Display_Implmnt/Segment_Display.srr"
+Running: Segment_Display_Implmnt in foreground
+
+Running Segment_Display_syn|Segment_Display_Implmnt
+
+Running: compile (Compile) on Segment_Display_syn|Segment_Display_Implmnt
+# Tue Nov  7 09:12:15 2023
+
+Running: compile_flow (Compile Process) on Segment_Display_syn|Segment_Display_Implmnt
+# Tue Nov  7 09:12:15 2023
+
+Running: compiler (Compile Input) on Segment_Display_syn|Segment_Display_Implmnt
+# Tue Nov  7 09:12:15 2023
+Warning: The following files were not found:
+/media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/Segment_Display/Project_7_Segment_Top.v
+Warning: File does not exist: /media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/Segment_Display/Project_7_Segment_Top.v
+compiler exited with errors
+Job failed on: Segment_Display_syn|Segment_Display_Implmnt
+
+Job: "compiler" terminated with error status: 2
+See log file: "/media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/Segment_Display/Segment_Display_Implmnt/synlog/Segment_Display_compiler.srr"
+# Tue Nov  7 09:12:15 2023
+
+Return Code: 2
+Run Time:00h:00m:00s
+Complete: Compile Process on Segment_Display_syn|Segment_Display_Implmnt
+Complete: Compile on Segment_Display_syn|Segment_Display_Implmnt
+Complete: Logic Synthesis on Segment_Display_syn|Segment_Display_Implmnt
+
+exit status=2
+
+exit status=2
+

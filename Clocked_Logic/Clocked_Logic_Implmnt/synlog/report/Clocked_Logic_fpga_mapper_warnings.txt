@@ -1,0 +1,4 @@
+@W: FX1039 :"/media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/Shared/Debounce_Switch.v":11:1:11:6|User-specified initial value defined for instance Instance.r_Count[17:0] is being ignored. 
+@W: FX1039 :"/media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/Shared/Debounce_Switch.v":11:1:11:6|User-specified initial value defined for instance Instance.r_State is being ignored. 
+@W: FX1039 :"/media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/Clocked_Logic/src/Clocked_Logic.v":16:1:16:6|User-specified initial value defined for instance r_LED_1 is being ignored. 
+@W: FX1039 :"/media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/Clocked_Logic/src/Clocked_Logic.v":16:1:16:6|User-specified initial value defined for instance r_Switch_1 is being ignored. 

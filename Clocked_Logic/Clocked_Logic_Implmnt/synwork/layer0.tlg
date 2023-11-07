@@ -1,0 +1,6 @@
+Selecting top level module Clocked_Logic
+@N: CG364 :"/media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/Shared/Debounce_Switch.v":1:7:1:21|Synthesizing module Debounce_Switch in library work.
+
+@A: CG412 :"/media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/Shared/Debounce_Switch.v":13:7:13:28|Treating === and !== as == and != -- possible simulation mismatch
+@N: CG364 :"/media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/Clocked_Logic/src/Clocked_Logic.v":1:7:1:19|Synthesizing module Clocked_Logic in library work.
+

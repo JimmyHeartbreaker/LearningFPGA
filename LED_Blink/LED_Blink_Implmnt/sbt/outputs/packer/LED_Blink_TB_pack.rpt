@@ -1,0 +1,64 @@
+* ******************************************************************************
+
+* iCEcube Report
+
+* Version:            2020.12.27943
+
+* Build Date:         Dec 10 2020 17:24:17
+
+* File Generated:     Nov 7 2023 09:15:09
+
+* Purpose:            General info of design implementation
+
+* Copyright (C) 2006-2010 by Lattice Semiconductor Corp. All rights reserved.
+
+* ******************************************************************************
+
+Synthesis/Placement Summary:
+----------------------------
+    Status:  Successful
+    Runtime: 0 seconds
+
+Device Info:
+------------
+    Device Family: iCE40
+    Device:        iCE40HX1K
+    Package:       VQ100
+
+Design statistics:
+------------------
+    FFs:                  0
+    LUTs:                 0
+    RAMs:                 0
+    IOBs:                 0
+    GBs:                  0
+    PLLs:                 0
+    Warm Boots:           0
+
+Logic Resource Utilization:
+---------------------------
+    Total Logic Cells: 0/1280
+        Combinational Logic Cells: 0        out of   1280      0%
+        Sequential Logic Cells:    0        out of   1280      0%
+        Logic Tiles:               0        out of   160       0%
+    Registers: 
+        Logic Registers:           0        out of   1280      0%
+        IO Registers:              0        out of   560       0
+    Block RAMs:                    0        out of   16        0%
+    Warm Boots:                    0        out of   1         0%
+    Pins:
+        Input Pins:                0        out of   72        0%
+        Output Pins:               0        out of   72        0%
+        InOut Pins:                0        out of   72        0%
+    Global Buffers:                0        out of   8         0%
+    PLLs:                          0        out of   0       
+
+IO Bank Utilization:
+--------------------
+    Bank 3: 0        out of   18        0%
+    Bank 1: 0        out of   19        0%
+    Bank 0: 0        out of   19        0%
+    Bank 2: 0        out of   16        0%
+
+Detailed I/O Info:
+------------------

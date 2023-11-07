@@ -1,0 +1,35 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/home/jimmyheartbreaker
+vSwitches_To_LEDs
+!s110 1699347806
+!i10b 1
+!s100 T72Lj?k<45fi1aS7NX7411
+!s11b Dg1SIo80bB@j0V0VzS_@n1
+Ii[GoS;L?9bHP>_0VEN@8C0
+VDg1SIo80bB@j0V0VzS_@n1
+d/media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/Switches_And_LEDs
+w1698918252
+8/media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/Switches_And_LEDs/Switches_To_LEDs.v
+F/media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/Switches_And_LEDs/Switches_To_LEDs.v
+!i122 0
+L0 1 16
+OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1699347806.000000
+!s107 /media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/Switches_And_LEDs/Switches_To_LEDs.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/Switches_And_LEDs/Switches_To_LEDs.v|
+!i113 1
+o-work work
+tCvgOpt 0
+n@switches_@to_@l@e@ds

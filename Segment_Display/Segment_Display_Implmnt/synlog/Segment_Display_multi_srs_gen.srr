@@ -1,0 +1,14 @@
+Synopsys Netlist Linker, version comp2016q3p1, Build 141R, built Dec  5 2016
+@N|Running in 64-bit mode
+File /media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/Segment_Display/Segment_Display_Implmnt/synwork/Segment_Display_comp.srs changed - recompiling
+@N: NF107 :"/media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/Segment_Display/src/Project_7_Segment_Top.v":1:7:1:27|Selected library: work cell: Project_7_Segment_Top view verilog as top level
+@N: NF107 :"/media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/Segment_Display/src/Project_7_Segment_Top.v":1:7:1:27|Selected library: work cell: Project_7_Segment_Top view verilog as top level
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 67MB peak: 68MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Tue Nov  7 09:12:37 2023
+
+###########################################################]

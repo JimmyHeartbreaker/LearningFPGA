@@ -1,0 +1,46 @@
+Running in Lattice mode
+
+
+Starting:    /media/jimmyheartbreaker/UDATA/_APPS/iCEcube2/synpbase/linux_a_64/mbin/synbatch
+Install:     /media/jimmyheartbreaker/UDATA/_APPS/iCEcube2/synpbase
+Hostname:    JamesYogaSlim
+Date:        Tue Nov  7 09:19:57 2023
+Version:     L-2016.09L+ice40
+
+Arguments:   -product synplify_pro -batch Clocked_Logic_syn.prj
+ProductType: synplify_pro
+
+
+
+
+
+log file: "/media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/Clocked_Logic/Clocked_Logic_Implmnt/Clocked_Logic.srr"
+Running: Clocked_Logic_Implmnt in foreground
+
+Running Clocked_Logic_syn|Clocked_Logic_Implmnt
+
+Running: compile (Compile) on Clocked_Logic_syn|Clocked_Logic_Implmnt
+# Tue Nov  7 09:19:57 2023
+
+Running: compile_flow (Compile Process) on Clocked_Logic_syn|Clocked_Logic_Implmnt
+# Tue Nov  7 09:19:57 2023
+
+Running: compiler (Compile Input) on Clocked_Logic_syn|Clocked_Logic_Implmnt
+# Tue Nov  7 09:19:57 2023
+compiler exited with errors
+Job failed on: Clocked_Logic_syn|Clocked_Logic_Implmnt
+
+Job: "compiler" terminated with error status: 2
+See log file: "/media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/Clocked_Logic/Clocked_Logic_Implmnt/synlog/Clocked_Logic_compiler.srr"
+# Tue Nov  7 09:19:57 2023
+
+Return Code: 2
+Run Time:00h:00m:00s
+Complete: Compile Process on Clocked_Logic_syn|Clocked_Logic_Implmnt
+Complete: Compile on Clocked_Logic_syn|Clocked_Logic_Implmnt
+Complete: Logic Synthesis on Clocked_Logic_syn|Clocked_Logic_Implmnt
+
+exit status=2
+
+exit status=2
+

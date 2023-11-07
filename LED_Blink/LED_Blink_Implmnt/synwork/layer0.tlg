@@ -1,0 +1,17 @@
+Selecting top level module LED_Blink_TB
+@W: CG730 :"/media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/LED_Blink/src/LED_Blink_TB.v":2:7:2:18|Top-level module LED_Blink_TB has no ports
+
+@N: CG364 :"/media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/LED_Blink/src/LED_Blink.v":1:7:1:15|Synthesizing module LED_Blink in library work.
+
+	g_COUNT_10HZ=32'b00000000000000000000000000000101
+	g_COUNT_5HZ=32'b00000000000000000000000000001010
+	g_COUNT_2HZ=32'b00000000000000000000000000011001
+	g_COUNT_1HZ=32'b00000000000000000000000000110010
+   Generated name = LED_Blink_5s_10s_25s_50s
+
+@N: CG364 :"/media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/LED_Blink/src/LED_Blink_TB.v":2:7:2:18|Synthesizing module LED_Blink_TB in library work.
+
+@W: CG294 :"/media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/LED_Blink/src/LED_Blink_TB.v":6:2:6:7|always block should contain at least one event control
+@W: CG532 :"/media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/LED_Blink/src/LED_Blink_TB.v":21:2:21:8|Within an initial block, only Verilog force statements and memory $readmemh/$readmemb initialization statements are recognized, and all other content is ignored.
+@W: CG532 :"/media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/LED_Blink/src/LED_Blink_TB.v":28:2:28:8|Within an initial block, only Verilog force statements and memory $readmemh/$readmemb initialization statements are recognized, and all other content is ignored.
+@W: CL168 :"/media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/LED_Blink/src/LED_Blink_TB.v":14:32:14:34|Removing instance UUT because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.

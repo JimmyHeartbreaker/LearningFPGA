@@ -1,0 +1,2 @@
+@E: Can't open file /media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/Segment_Display/Project_7_Segment_Top.v
+

@@ -1,0 +1,7 @@
+/media/jimmyheartbreaker/UDATA/_APPS/iCEcube2/synpbase/bin/syn_nfilter  -link  -multisrs  "/media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/Clocked_Logic/Clocked_Logic_Implmnt/synwork/Clocked_Logic_comp.srs"  -osyn  "/media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/Clocked_Logic/Clocked_Logic_Implmnt/synwork/Clocked_Logic_mult.srs"  -log  "/media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/Clocked_Logic/Clocked_Logic_Implmnt/synlog/Clocked_Logic_multi_srs_gen.srr" 
+rc:0 success:1 runtime:1
+file:/media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/Clocked_Logic/Clocked_Logic_Implmnt/synwork/Clocked_Logic_comp.srs|io:i|time:1699348823|size:3191|exec:0
+file:/media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/Clocked_Logic/Clocked_Logic_Implmnt/synwork/Clocked_Logic_mult.srs|io:o|time:1699348824|size:2041|exec:0
+file:/media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/Clocked_Logic/Clocked_Logic_Implmnt/synlog/Clocked_Logic_multi_srs_gen.srr|io:o|time:1699348824|size:752|exec:0
+file:/media/jimmyheartbreaker/UDATA/_APPS/iCEcube2/synpbase/linux_a_64/syn_nfilter|io:i|time:1698915716|size:11473624|exec:1
+file:/media/jimmyheartbreaker/UDATA/_APPS/iCEcube2/synpbase/bin/syn_nfilter|io:i|time:1698919031|size:368|exec:1

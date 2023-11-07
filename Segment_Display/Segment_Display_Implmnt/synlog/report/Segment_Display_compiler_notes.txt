@@ -1,0 +1,9 @@
+@N|Running in 64-bit mode
+@N|Running in 64-bit mode
+@N: CG364 :"/media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/Shared/Debounce_Switch.v":1:7:1:21|Synthesizing module Debounce_Switch in library work.
+@N: CG364 :"/media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/Segment_Display/src/Binary_To_7Segment.v":1:7:1:24|Synthesizing module Binary_To_7Segment in library work.
+@N: CG364 :"/media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/Segment_Display/src/Project_7_Segment_Top.v":1:7:1:27|Synthesizing module Project_7_Segment_Top in library work.
+@N|Running in 64-bit mode
+@N: NF107 :"/media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/Segment_Display/src/Project_7_Segment_Top.v":1:7:1:27|Selected library: work cell: Project_7_Segment_Top view verilog as top level
+@N: NF107 :"/media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/Segment_Display/src/Project_7_Segment_Top.v":1:7:1:27|Selected library: work cell: Project_7_Segment_Top view verilog as top level
+

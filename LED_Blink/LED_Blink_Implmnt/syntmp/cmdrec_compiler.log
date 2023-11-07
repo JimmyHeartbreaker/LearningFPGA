@@ -1,0 +1,9 @@
+/media/jimmyheartbreaker/UDATA/_APPS/iCEcube2/synpbase/bin/c_hdl  -osyn  "/media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/LED_Blink/LED_Blink_Implmnt/synwork/LED_Blink_comp.srs"  -hdllog  "/media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/LED_Blink/LED_Blink_Implmnt/synlog/LED_Blink_compiler.srr"  -encrypt  -mp  4  -verification_mode 0  -verilog  -prodtype  synplify_pro  -primux -fixsmult -infer_seqShift -ice -sdff_counter -nram -divnmod -nostructver   -I "/media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/LED_Blink/"  -I /media/jimmyheartbreaker/UDATA/_APPS/iCEcube2/synpbase/lib   -v2001  -devicelib  /media/jimmyheartbreaker/UDATA/_APPS/iCEcube2/synpbase/lib/generic/sb_ice40.v  -encrypt  -pro  -dmgen  "/media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/LED_Blink/LED_Blink_Implmnt/dm"  -ui -fid2 -ram -sharing on -ll 2000 -autosm  -lib work "/media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/LED_Blink/src/LED_Blink.v" -lib work "/media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/LED_Blink/src/LED_Blink_TB.v" 
+rc:0 success:1 runtime:1
+file:/media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/LED_Blink/LED_Blink_Implmnt/synwork/LED_Blink_comp.srs|io:o|time:1699348499|size:1212|exec:0
+file:/media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/LED_Blink/LED_Blink_Implmnt/synlog/LED_Blink_compiler.srr|io:o|time:1699348499|size:4834|exec:0
+file:/media/jimmyheartbreaker/UDATA/_APPS/iCEcube2/synpbase/lib/generic/sb_ice40.v|io:i|time:1698919066|size:220434|exec:0
+file:/media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/LED_Blink/src/LED_Blink.v|io:i|time:1699300021|size:1383|exec:0
+file:/media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/LED_Blink/src/LED_Blink_TB.v|io:i|time:1699300001|size:705|exec:0
+file:/media/jimmyheartbreaker/UDATA/_APPS/iCEcube2/synpbase/linux_a_64/c_hdl|io:i|time:1698915715|size:5690328|exec:1
+file:/media/jimmyheartbreaker/UDATA/_APPS/iCEcube2/synpbase/bin/c_hdl|io:i|time:1698919031|size:367|exec:1

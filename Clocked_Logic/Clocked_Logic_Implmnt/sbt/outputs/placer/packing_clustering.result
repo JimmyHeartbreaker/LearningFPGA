@@ -1,0 +1,40 @@
+ble_pack Instance.r_Count_2_cry_1_c_LC_32 {Instance.r_Count_2_cry_1_c}
+ble_pack Instance.r_Count[2]_LC_14 {Instance.r_Count[2], Instance.r_Count_2_cry_2_c, Instance.r_Count_RNO[2]}
+ble_pack Instance.r_Count[3]_LC_15 {Instance.r_Count[3], Instance.r_Count_2_cry_3_c, Instance.r_Count_RNO[3]}
+ble_pack Instance.r_Count[4]_LC_16 {Instance.r_Count[4], Instance.r_Count_2_cry_4_c, Instance.r_Count_RNO[4]}
+ble_pack Instance.r_Count[5]_LC_17 {Instance.r_Count[5], Instance.r_Count_2_cry_5_c, Instance.r_Count_RNO[5]}
+ble_pack Instance.r_Count[6]_LC_18 {Instance.r_Count[6], Instance.r_Count_2_cry_6_c, Instance.r_Count_RNO[6]}
+ble_pack Instance.r_Count[7]_LC_19 {Instance.r_Count[7], Instance.r_Count_2_cry_7_c, Instance.r_Count_RNO[7]}
+ble_pack Instance.r_Count[8]_LC_20 {Instance.r_Count[8], Instance.r_Count_2_cry_8_c, Instance.r_Count_RNO[8]}
+clb_pack PLB_0 {Instance.r_Count_2_cry_1_c_LC_32, Instance.r_Count[2]_LC_14, Instance.r_Count[3]_LC_15, Instance.r_Count[4]_LC_16, Instance.r_Count[5]_LC_17, Instance.r_Count[6]_LC_18, Instance.r_Count[7]_LC_19, Instance.r_Count[8]_LC_20}
+ble_pack Instance.r_Count[9]_LC_21 {Instance.r_Count[9], Instance.r_Count_2_cry_9_c, Instance.r_Count_RNO[9]}
+ble_pack Instance.r_Count[10]_LC_6 {Instance.r_Count[10], Instance.r_Count_2_cry_10_c, Instance.r_Count_RNO[10]}
+ble_pack Instance.r_Count[11]_LC_7 {Instance.r_Count[11], Instance.r_Count_2_cry_11_c, Instance.r_Count_RNO[11]}
+ble_pack Instance.r_Count[12]_LC_8 {Instance.r_Count[12], Instance.r_Count_2_cry_12_c, Instance.r_Count_RNO[12]}
+ble_pack Instance.r_Count[13]_LC_9 {Instance.r_Count[13], Instance.r_Count_2_cry_13_c, Instance.r_Count_RNO[13]}
+ble_pack Instance.r_Count[14]_LC_10 {Instance.r_Count[14], Instance.r_Count_2_cry_14_c, Instance.r_Count_RNO[14]}
+ble_pack Instance.r_Count[15]_LC_11 {Instance.r_Count[15], Instance.r_Count_2_cry_15_c, Instance.r_Count_RNO[15]}
+ble_pack Instance.r_Count[16]_LC_12 {Instance.r_Count[16], Instance.r_Count_2_cry_16_c, Instance.r_Count_RNO[16]}
+clb_pack PLB_1 {Instance.r_Count[9]_LC_21, Instance.r_Count[10]_LC_6, Instance.r_Count[11]_LC_7, Instance.r_Count[12]_LC_8, Instance.r_Count[13]_LC_9, Instance.r_Count[14]_LC_10, Instance.r_Count[15]_LC_11, Instance.r_Count[16]_LC_12}
+ble_pack Instance.r_Count[17]_LC_13 {Instance.r_Count[17], Instance.r_Count_RNO[17]}
+clb_pack PLB_2 {Instance.r_Count[17]_LC_13}
+ble_pack Instance.r_Count_RNI3MNN2[12]_LC_0 {Instance.r_Count_RNI3MNN2[12]}
+ble_pack Instance.r_State_RNILDTA3_LC_22 {Instance.r_State_RNILDTA3}
+ble_pack Instance.r_Count_RNIA7GM1[4]_LC_2 {Instance.r_Count_RNIA7GM1[4]}
+ble_pack Instance.r_Count_RNI8Q7U[10]_LC_1 {Instance.r_Count_RNI8Q7U[10]}
+ble_pack Instance.r_Count_RNIELV5[17]_LC_3 {Instance.r_Count_RNIELV5[17]}
+ble_pack Instance.r_State_RNO_3_LC_27 {Instance.r_State_RNO_3}
+clb_pack PLB_3 {Instance.r_Count_RNI3MNN2[12]_LC_0, Instance.r_State_RNILDTA3_LC_22, Instance.r_Count_RNIA7GM1[4]_LC_2, Instance.r_Count_RNI8Q7U[10]_LC_1, Instance.r_Count_RNIELV5[17]_LC_3, Instance.r_State_RNO_3_LC_27}
+ble_pack Instance.r_State_RNO_0_LC_24 {Instance.r_State_RNO_0}
+ble_pack Instance.r_State_LC_23 {Instance.r_State, Instance.r_State_RNO}
+ble_pack Instance.r_State_RNO_2_LC_26 {Instance.r_State_RNO_2}
+ble_pack Instance.r_State_RNO_1_LC_25 {Instance.r_State_RNO_1}
+ble_pack Instance.r_State_RNO_4_LC_28 {Instance.r_State_RNO_4}
+ble_pack Instance.r_State_RNO_5_LC_29 {Instance.r_State_RNO_5}
+ble_pack r_Switch_1_LC_31 {r_Switch_1, r_Switch_1_THRU_LUT4_0}
+clb_pack PLB_4 {Instance.r_State_RNO_0_LC_24, Instance.r_State_LC_23, Instance.r_State_RNO_2_LC_26, Instance.r_State_RNO_1_LC_25, Instance.r_State_RNO_4_LC_28, Instance.r_State_RNO_5_LC_29, r_Switch_1_LC_31}
+ble_pack r_LED_1_LC_30 {r_LED_1, r_LED_1_RNO}
+clb_pack PLB_5 {r_LED_1_LC_30}
+ble_pack Instance.r_Count[1]_LC_5 {Instance.r_Count[1], Instance.r_Count_RNO[1]}
+ble_pack Instance.r_Count[0]_LC_4 {Instance.r_Count[0], Instance.r_Count_RNO[0]}
+clb_pack PLB_6 {Instance.r_Count[1]_LC_5, Instance.r_Count[0]_LC_4}

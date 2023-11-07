@@ -1,0 +1,10 @@
+[VIC]
+CO2_cascade_=ltout:in0
+Debounce_Switch_Inst.r_Count13_12_cascade_=ltout:in0
+Debounce_Switch_Inst.r_Count13_7_cascade_=ltout:in0
+Debounce_Switch_Inst.r_Count13_8_0_cascade_=ltout:in1
+Debounce_Switch_Inst.un1_r_Count_10lt11_0_cascade_=ltout:in2
+Debounce_Switch_Inst.un1_r_Count_10lt17_cascade_=ltout:in0
+r1_Count16_cascade_=ltout:in0
+r1_Count20_cascade_=ltout:in0
+r2_Count_RNO_0Z0Z_3_cascade_=ltout:in0

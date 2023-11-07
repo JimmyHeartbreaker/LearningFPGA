@@ -1,0 +1,1 @@
+@W: MT548 :"/media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/Constraints/Go_Board_Clock_Constraint.sdc":1:0:1:0|Source for clock i_Clk not found in netlist. Run the constraint checker to verify if constraints are applied correctly.

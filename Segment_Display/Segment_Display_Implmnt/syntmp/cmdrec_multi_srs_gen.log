@@ -1,0 +1,7 @@
+/media/jimmyheartbreaker/UDATA/_APPS/iCEcube2/synpbase/bin/syn_nfilter  -link  -multisrs  "/media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/Segment_Display/Segment_Display_Implmnt/synwork/Segment_Display_comp.srs"  -osyn  "/media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/Segment_Display/Segment_Display_Implmnt/synwork/Segment_Display_mult.srs"  -log  "/media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/Segment_Display/Segment_Display_Implmnt/synlog/Segment_Display_multi_srs_gen.srr" 
+rc:0 success:1 runtime:0
+file:/media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/Segment_Display/Segment_Display_Implmnt/synwork/Segment_Display_comp.srs|io:i|time:1699348355|size:5601|exec:0
+file:/media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/Segment_Display/Segment_Display_Implmnt/synwork/Segment_Display_mult.srs|io:o|time:1699348357|size:3849|exec:0
+file:/media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/Segment_Display/Segment_Display_Implmnt/synlog/Segment_Display_multi_srs_gen.srr|io:o|time:1699348357|size:940|exec:0
+file:/media/jimmyheartbreaker/UDATA/_APPS/iCEcube2/synpbase/linux_a_64/syn_nfilter|io:i|time:1698915716|size:11473624|exec:1
+file:/media/jimmyheartbreaker/UDATA/_APPS/iCEcube2/synpbase/bin/syn_nfilter|io:i|time:1698919031|size:368|exec:1
