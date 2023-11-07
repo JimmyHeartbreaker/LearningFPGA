@@ -10,3 +10,4 @@
 **/dump.vcd
 **/transcript
 **/*.bak
+**/synlog.tcl

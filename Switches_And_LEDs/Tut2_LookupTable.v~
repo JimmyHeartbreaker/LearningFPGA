@@ -1,8 +1,0 @@
-module And_Gate
-	(input i_Switch_1,
-	 input i_Switch_2,
-	 output o_LED_1);
-	 
-	assign i_LED_1 = i_Switch_1 & i_Switch_2l
-
-endmodule //And_Gate
