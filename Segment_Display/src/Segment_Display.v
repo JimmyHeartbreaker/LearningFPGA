@@ -1,4 +1,4 @@
-module Project_7_Segment_Top(
+module Segment_Display #(parameter c_DEBOUNCE_LIMIT = 250000) (
 	input	i_Clk,
 	input	i_Switch_1,
 	output	o_Segment2_A,
@@ -24,7 +24,8 @@ module Project_7_Segment_Top(
 	wire	[7:0]	w_Segment2;
 	wire	[7:0]	w_Segment1;
 	
-	Debounce_Switch Debounce_Switch_Inst(.i_Clk(i_Clk),.i_Switch(i_Switch_1),.o_Switch(w_Switch_1));
+	Debounce_Switch #(.c_DEBOUNCE_LIMIT(c_DEBOUNCE_LIMIT)) 
+	Debounce_Switch_Inst (.i_Clk(i_Clk),.i_Switch(i_Switch_1),.o_Switch(w_Switch_1));
 	
 	always @(posedge i_Clk)
 	begin	

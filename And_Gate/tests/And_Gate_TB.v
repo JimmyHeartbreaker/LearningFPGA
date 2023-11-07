@@ -17,7 +17,7 @@ module And_Gate_TB ();
 	#200;
 	if(!(o_LED_1==1)) $display("assert failed: o_LED_1 is not high");
 	
-    	$finish();
+    	$stop();
     end
   
   initial 

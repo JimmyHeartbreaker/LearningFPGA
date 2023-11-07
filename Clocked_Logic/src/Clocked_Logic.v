@@ -1,5 +1,5 @@
 module Clocked_Logic
-	#(parameter c_DEBOUNCE_LIMIT = 1250000)
+	#(parameter c_DEBOUNCE_LIMIT = 250000)
 	(input i_Clk,
 	 input i_Switch_1,
 	 output o_LED_1);

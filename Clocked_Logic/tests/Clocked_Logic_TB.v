@@ -21,6 +21,7 @@ module Clocked_Logic_TB ();
 	i_Switch_1 = 0;
 	#200;
 	if(!(o_LED_1==1)) $display("assert failed: o_LED_1 is not high");
+
 	i_Switch_1 = 1;
 	#200;
 	i_Switch_1 = 0;
