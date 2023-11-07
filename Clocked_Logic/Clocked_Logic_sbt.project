@@ -32,7 +32,7 @@ Version=Lattice Semiconductor Corporation iCEcube - Release: 2020.12.27943 - Bui
 ProjectName=Clocked_Logic
 Vendor=SiliconBlue
 Synthesis=synplify
-ProjectVFiles=src/Clocked_Logic.v,../Shared/Debounce_Switch.v=work
+ProjectVFiles=src/Clocked_Logic.v=work,../Shared/Debounce_Switch.v=work
 ProjectCFiles=../Constraints/Go_Board_Clock_Constraint.sdc
 CurImplementation=Clocked_Logic_Implmnt
 Implementations=Clocked_Logic_Implmnt

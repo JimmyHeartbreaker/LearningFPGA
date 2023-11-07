@@ -1,1 +1,0 @@
-@W: MF511 |Found issues with constraints. Please check constraint checker report "/media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/LED_Blink/LED_Blink_Implmnt/LED_Blink_cck.rpt" .

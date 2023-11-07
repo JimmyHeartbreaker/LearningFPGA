@@ -1,2 +1,0 @@
-@E: CG389 :"/media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/Clocked_Logic/src/Clocked_Logic.v":11:17:11:24|Reference to undefined module Debounce_Switch
-
