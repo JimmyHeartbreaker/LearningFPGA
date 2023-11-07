@@ -7,7 +7,7 @@ NetlistFile=And_Gate_Implmnt/And_Gate.edf
 AdditionalEDIFFile=
 IPEDIFFile=
 DesignLib=And_Gate_Implmnt/sbt/netlist/oadb-And_Gate
-DesignView=_rt
+DesignView=
 DesignCell=And_Gate
 SynthesisSDCFile=And_Gate_Implmnt/And_Gate.scf
 UserPinConstraintFile=
@@ -32,7 +32,7 @@ Version=Lattice Semiconductor Corporation iCEcube - Release: 2020.12.27943 - Bui
 ProjectName=And_Gate
 Vendor=SiliconBlue
 Synthesis=synplify
-ProjectVFiles=src/And_Gate.v
+ProjectVFiles=src/And_Gate.v=work
 ProjectCFiles=
 CurImplementation=And_Gate_Implmnt
 Implementations=And_Gate_Implmnt

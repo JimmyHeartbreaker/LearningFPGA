@@ -1,7 +1,0 @@
-/media/jimmyheartbreaker/UDATA/_APPS/iCEcube2/synpbase/bin/syn_nfilter  -link  -multisrs  "/media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/And_Gate/And_Gate_Implmnt/synwork/And_Gate_comp.srs"  -osyn  "/media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/And_Gate/And_Gate_Implmnt/synwork/And_Gate_mult.srs"  -log  "/media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/And_Gate/And_Gate_Implmnt/synlog/And_Gate_multi_srs_gen.srr" 
-rc:0 success:1 runtime:1
-file:/media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/And_Gate/And_Gate_Implmnt/synwork/And_Gate_comp.srs|io:i|time:1699348857|size:1337|exec:0
-file:/media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/And_Gate/And_Gate_Implmnt/synwork/And_Gate_mult.srs|io:o|time:1699348859|size:1182|exec:0
-file:/media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/And_Gate/And_Gate_Implmnt/synlog/And_Gate_multi_srs_gen.srr|io:o|time:1699348859|size:853|exec:0
-file:/media/jimmyheartbreaker/UDATA/_APPS/iCEcube2/synpbase/linux_a_64/syn_nfilter|io:i|time:1698915716|size:11473624|exec:1
-file:/media/jimmyheartbreaker/UDATA/_APPS/iCEcube2/synpbase/bin/syn_nfilter|io:i|time:1698919031|size:368|exec:1
