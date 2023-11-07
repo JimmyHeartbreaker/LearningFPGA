@@ -3,7 +3,6 @@
 #project files
 
 add_file -verilog -lib work "src/LED_Blink.v" 
-add_file -verilog -lib work "src/LED_Blink_TB.v" 
 add_file -constraint -lib work "../Constraints/Go_Board_Clock_Constraint.sdc"
 #implementation: "LED_Blink_Implmnt"
 impl -add LED_Blink_Implmnt -type fpga

@@ -22,7 +22,7 @@ module LED_Blink_TB ();
     begin
       $display("Starting Testbench...");
       #200;
-      $finish();
+      $stop();
     end
   
   initial 

@@ -20,7 +20,7 @@ module LED_Blink
   
   always @(posedge i_Clk)
   begin
-    if (r_Count_10Hz == g_COUNT_10HZ)
+    if (r_Count_10Hz == g_COUNT_10HZ-1)
     begin
       o_LED_1      <= ~o_LED_1;
       r_Count_10Hz <= 0;
@@ -31,7 +31,7 @@ module LED_Blink
 
   always @(posedge i_Clk)
   begin
-    if (r_Count_5Hz == g_COUNT_5HZ)
+    if (r_Count_5Hz == g_COUNT_5HZ-1)
     begin
       o_LED_2     <= ~o_LED_2;
       r_Count_5Hz <= 0;
@@ -42,7 +42,7 @@ module LED_Blink
 
   always @(posedge i_Clk)
   begin
-    if (r_Count_2Hz == g_COUNT_2HZ)
+    if (r_Count_2Hz == g_COUNT_2HZ-1)
     begin
       o_LED_3     <= ~o_LED_3;
       r_Count_2Hz <= 0;
@@ -53,7 +53,7 @@ module LED_Blink
 
   always @(posedge i_Clk)
   begin
-    if (r_Count_1Hz == g_COUNT_1HZ)
+    if (r_Count_1Hz == g_COUNT_1HZ-1)
     begin
       o_LED_4     <= ~o_LED_4;
       r_Count_1Hz <= 0;
