@@ -1,0 +1,15 @@
+/media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Shared/Debounce_Switch.v {1 {vlog -work work -stats=none /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Shared/Debounce_Switch.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Debounce_Switch
+
+Top level modules:
+	Debounce_Switch
+
+} {} {}} /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Clocked_Logic/src/Clocked_Logic.v {1 {vlog -work work -stats=none /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Clocked_Logic/src/Clocked_Logic.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Clocked_Logic
+
+Top level modules:
+	Clocked_Logic
+
+} {} {}}

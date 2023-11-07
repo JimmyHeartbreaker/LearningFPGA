@@ -1,9 +1,9 @@
 module Debounce_Switch
+	#(parameter c_DEBOUNCE_LIMIT = 1250000)// 10 ms at 25 MHz
 	(input i_Clk,
 	 input i_Switch,
 	 output o_Switch);
 
-	parameter c_DEBOUNCE_LIMIT = 250000;// 10 ms at 25 MHz
 
 	reg r_State = 1'b0;
 	reg [17:0] r_Count = 0;	
