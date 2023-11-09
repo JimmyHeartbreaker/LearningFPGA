@@ -1,4 +1,11 @@
-/media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Calculator_Simple/tests/Calculator_Simple_TB.v {1 {vlog -work work -sv -stats=none /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Calculator_Simple/tests/Calculator_Simple_TB.v
+/media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Calculator_Simple/src/Calculator_Simple.v {1 {vlog -work work -sv -stats=none /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Calculator_Simple/src/Calculator_Simple.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Calculator_Simple
+
+Top level modules:
+	Calculator_Simple
+
+} {} {}} /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Calculator_Simple/tests/Calculator_Simple_TB.v {1 {vlog -work work -sv -stats=none /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Calculator_Simple/tests/Calculator_Simple_TB.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module Calculator_Simple_TB
 
