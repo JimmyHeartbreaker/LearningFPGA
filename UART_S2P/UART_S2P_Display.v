@@ -28,9 +28,9 @@ module UART_S2P_Display
 			IDLE : 
 			begin
 				if (i_Rx_UART == 1'b0)
-				begin
 					r_State_S2P <= BEGIN;					
-				end				   	
+				else
+					r_State_S2P <= IDLE;				   	
 			end
 			BEGIN : 
 			begin 
