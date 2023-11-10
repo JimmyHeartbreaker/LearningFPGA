@@ -18,15 +18,15 @@ module UART_RX
 
 	always @(posedge i_Clk)
 	begin	 
-		casez(r_State)
+		case(r_State)
 			IDLE : 
 			begin
 				r_Rx_ByteCompleted <= 0;
 				if (!i_Rx_UART)//wait for low 
 				begin
-					r_Byte_Result = 0;
-					r_Index_Bit =  4'b0;
-					r_Count_Clk = 1;
+					r_Byte_Result <= 0;
+					r_Index_Bit <=  4'b0;
+					r_Count_Clk <= 1;
 					r_State <= START_BIT;					
 				end
 				else
