@@ -48,7 +48,7 @@ module UART_RX_TB();
   UART_RX #(.p_CLKs_PB(c_CLKS_PER_BIT)) UART_RX_INST
     (.i_Clk(r_Clock),
      .i_Rx_UART(r_RX_Serial),
-     .o_Rx_ByteCompleted(),
+     .o_Rx_Completed(),
      .o_Rx_Byte(w_RX_Byte)
      );
   

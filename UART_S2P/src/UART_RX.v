@@ -2,7 +2,10 @@ module UART_RX
 	#(parameter p_CLKs_PB = 217) //clocks per bit
 	(input i_Clk,
 	 input i_Rx_UART,	
-	 output reg o_Rx_Completed = 1'b0, 
+	//0 = idle, 1 = 1st bit read,  2 = complete, 
+	//by having this tri state the test is able to 
+	//overlap the writer with the reader for maximum performance
+	 output reg o_Rx_State = 1'b00, 
 	 output reg [7:0] o_Rx_Byte = 0);
 
  	parameter IDLE = 3'b000;
@@ -19,16 +22,14 @@ module UART_RX
 		case(r_State)
 			IDLE : 
 			begin
-				o_Rx_Completed <= 0;
+				o_Rx_State <= 0;
 				if (!i_Rx_UART)//wait for low 
 				begin
 					o_Rx_Byte <= 0;
 					r_Index_Bit <=  4'b0;
 					r_Count_Clk <= 1;
 					r_State <= START_BIT;					
-				end
-				else
-					r_State <= IDLE;				   	
+				end			   	
 			end
 			START_BIT : 
 			begin 
@@ -46,15 +47,15 @@ module UART_RX
 					r_Count_Clk <= IDLE;				
 			end
 			READ : 
-			begin 
-				if(r_Index_Bit == 8)
+			begin 				
+				if(r_Count_Clk == p_CLKs_PB-1) //middle of bit
 				begin
-					r_State <= END_BIT;
- 					r_Count_Clk <= 1;
-				end
-				else if(r_Count_Clk == p_CLKs_PB-1)
-				begin
+					if(r_Index_Bit == 7)
+					begin
+						r_State <= END_BIT;
+					end
 					o_Rx_Byte[r_Index_Bit] <= i_Rx_UART;
+					o_Rx_State <= 1;
 					r_Count_Clk <= 0;
 					r_Index_Bit <= r_Index_Bit + 1;
 				end
@@ -64,11 +65,9 @@ module UART_RX
 			end
 			END_BIT : 
 			begin 				
-				if(r_Count_Clk == p_CLKs_PB-1)
+				if(r_Count_Clk == p_CLKs_PB-1) //middle of bit
 				begin
-					if (!i_Rx_UART)
-						$display("END BIT NOT HIGH!");
-					o_Rx_Completed <= 1;
+					o_Rx_State <= 2;
 					r_State <= IDLE;
 				end
 				else
