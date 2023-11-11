@@ -33,9 +33,8 @@ module UART_TX
 					r_Count_Clk <= 0;	
 				end
 				else
-				begin
-					if(!r_Count_Clk)
-						o_Tx_UART <= 0;
+				begin					
+					o_Tx_UART <= 0;
 					r_Count_Clk <= r_Count_Clk + 1;		
 				end		
 			end
@@ -51,9 +50,8 @@ module UART_TX
 					r_Count_Clk <= 0;
 				end
 				else
-				begin
-					if(!r_Count_Clk)
-						o_Tx_UART <= i_Tx_Byte[r_Index_Bit];		
+				begin					
+					o_Tx_UART <= i_Tx_Byte[r_Index_Bit];		
 					r_Count_Clk <= r_Count_Clk + 1;
 				end
 	
@@ -68,9 +66,8 @@ module UART_TX
 					r_Index_Bit <= 0;
 				end
 				else	
-				begin				
-					if(!r_Count_Clk)
-						o_Tx_UART <= 1;	
+				begin		
+					o_Tx_UART <= 1;	
 					r_Count_Clk <= r_Count_Clk + 1;
 				end
 			end

@@ -33,27 +33,26 @@ module UART_RX
 			end
 			START_BIT : 
 			begin 
-				if (!i_Rx_UART)//check we are still low
+								
+				if(r_Count_Clk == ((p_CLKs_PB-1)/2)) //when we are 1/2 way through the START BIT switch to READ. reset counter
 				begin
-					if(r_Count_Clk == ((p_CLKs_PB-1)/2)) //when we are 1/2 way through the START BIT switch to READ. reset counter
-					begin
-						r_State <= READ;
-						r_Count_Clk <= 0;
-					end
-					else
-					   	r_Count_Clk <= r_Count_Clk + 1;
+					r_State <= READ;
+					r_Count_Clk <= 0;
 				end
-				else				
-					r_Count_Clk <= IDLE;				
+				else if (i_Rx_UART)//check we are still low				
+					r_Count_Clk <= IDLE;
+				else
+				   	r_Count_Clk <= r_Count_Clk + 1;
+								
+									
 			end
 			READ : 
 			begin 				
 				if(r_Count_Clk == p_CLKs_PB-1) //middle of bit
 				begin
-					if(r_Index_Bit == 7)
-					begin
+					if(r_Index_Bit == 7)					
 						r_State <= END_BIT;
-					end
+					
 					o_Rx_Byte[r_Index_Bit] <= i_Rx_UART;
 					o_Rx_State <= 1;
 					r_Count_Clk <= 0;
