@@ -1,16 +1,24 @@
-#-- Synopsys, Inc.
-#-- Project file /media/jimmyheartbreaker/UDATA/_REPOS/FPGA Projects/Segment_Display/Segment_Display/Segment_Display_syn.prj
+#--  Synopsys, Inc.
+#--  Version L-2016.09L+ice40
+#--  Project file /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Segment_Display/Segment_Display_syn.prj
+#--  Written on Sat Nov 11 16:28:30 2023
+
+
 #project files
 
+
+
 add_file -verilog -lib work "../Shared/Debounce_Switch.v" 
-add_file -verilog -lib work "src/Binary_To_7Segment.v" 
 add_file -verilog -lib work "src/Segment_Display.v" 
+add_file -verilog -lib work "../Shared/Binary_To_7Segment.v" 
 add_file -constraint -lib work "../Constraints/Go_Board_Clock_Constraint.sdc"
 #implementation: "Segment_Display_Implmnt"
 impl -add Segment_Display_Implmnt -type fpga
 
+#
 #implementation attributes
-set_option -vlog_std v2001
+
+set_option -vlog_std sysv
 set_option -project_relative_includes 1
 
 #device options
@@ -22,24 +30,29 @@ set_option -part_companion ""
 
 #compilation/mapping options
 
-# mapper_options
+# hdl_compiler_options
+set_option -distributed_compile 0
+
+# mapper_without_write_options
 set_option -frequency auto
+set_option -srs_instrumentation 1
+
+# mapper_options
 set_option -write_verilog 0
 set_option -write_vhdl 0
 
-# Silicon Blue iCE40
+# Lattice iCE40
 set_option -maxfan 10000
+set_option -rw_check_on_ram 0
 set_option -disable_io_insertion 0
 set_option -pipe 1
 set_option -retiming 0
 set_option -update_models_cp 0
-set_option -fixgatedclocks 2
-set_option -fixgeneratedclocks 0
+set_option -fix_gated_and_generated_clocks 1
+set_option -run_prop_extract 1
 
 # NFilter
-set_option -popfeed 0
-set_option -constprop 0
-set_option -createhierarchy 0
+set_option -no_sequential_opt 0
 
 # sequential_optimization_options
 set_option -symbolic_fsm_compiler 1
@@ -48,12 +61,13 @@ set_option -symbolic_fsm_compiler 1
 set_option -compiler_compatible 0
 set_option -resource_sharing 1
 
+# Compiler Options
+set_option -auto_infer_blackbox 0
+
 #automatic place and route (vendor) options
 set_option -write_apr_constraint 1
 
 #set result format/file last
-project -result_format "edif"
-project -result_file ./Segment_Display_Implmnt/Segment_Display.edf
-project -log_file "./Segment_Display_Implmnt/Segment_Display.srr"
+project -result_file "Segment_Display_Implmnt/Segment_Display.edf"
 impl -active Segment_Display_Implmnt
 project -run synthesis -clean

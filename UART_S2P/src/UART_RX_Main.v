@@ -26,19 +26,20 @@ module UART_RX_Main	#(parameter p_CLKs_PB = 217)( //clocks per bit
 	logic w_Rx_State;
 	logic[7:0] w_Rx_Byte;
 
+	//read uart
 	UART_RX #(.p_CLKs_PB(p_CLKs_PB))
 	UART_RX_INST(
 		.i_Clk(i_Clk),.i_Rx_UART(i_UART_RX),
 		.o_Rx_State(w_Rx_State),.o_Rx_Byte(w_Rx_Byte));
 
+	//echo uart
 	UART_TX #(.p_CLKs_PB(p_CLKs_PB)) 
-	UART_TX_INST
-    (.i_Clk(i_Clk),
-     .i_Tx_Byte(w_Rx_Byte),
-     .i_Tx_Ready(w_Rx_State),
-     .o_Tx_Completed(),
-     .o_Tx_UART(w_UART_TX)
-     );
+	UART_TX_INST(
+		.i_Clk(i_Clk),
+     		.i_Tx_Byte(w_Rx_Byte),
+     		.i_Tx_Ready(w_Rx_State),
+     		.o_Tx_Completed(),
+     		.o_Tx_UART(w_UART_TX));
 
 	Binary_To_7Segment Bin27Inst2(
 		.i_Clk(i_Clk),

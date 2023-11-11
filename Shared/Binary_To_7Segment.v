@@ -3,7 +3,7 @@ module Binary_To_7Segment(
 	input 	[3:0]	i_Binary_Num,
 	output	[7:0]	o_Segment);
 	
-	reg	[6:0]	r_Hex_Encoding = 7'h00;
+	logic	[6:0]	r_Hex_Encoding = 7'h00;
 	
 	always @(posedge i_Clk)
 		begin

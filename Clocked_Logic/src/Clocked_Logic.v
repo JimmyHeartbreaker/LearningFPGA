@@ -4,9 +4,9 @@ module Clocked_Logic
 	 input i_Switch_1,
 	 output o_LED_1);
 	 
-	reg 	r_LED_1 	= 1'b0;
-	reg 	r_Switch_1 	= 1'b0;
-	wire 	w_Switch_1;
+	logic 	r_LED_1 	= 1'b0;
+	logic 	r_Switch_1 	= 1'b0;
+	logic 	w_Switch_1;
 
 	// Instantiate Debounce Filter
 	Debounce_Switch #(.c_DEBOUNCE_LIMIT(c_DEBOUNCE_LIMIT)) Instance

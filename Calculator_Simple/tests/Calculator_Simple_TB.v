@@ -16,22 +16,22 @@
 
 module Calculator_Simple_TB ();
 
-	reg r_Clock = 1'b0;
-	reg i_Switch_1,i_Switch_2,i_Switch_3,i_Switch_4;
-	wire	o_Segment2_A;
-	wire	o_Segment2_B;
-	wire	o_Segment2_C;
-	wire	o_Segment2_D;
-	wire	o_Segment2_E;
-	wire	o_Segment2_F;
-	wire	o_Segment2_G;
-	wire	o_Segment1_A;
-	wire	o_Segment1_B;
-	wire	o_Segment1_C;
-	wire	o_Segment1_D;
-	wire	o_Segment1_E;
-	wire	o_Segment1_F;
-	wire	o_Segment1_G;
+	logic r_Clock = 1'b0;
+	logic i_Switch_1,i_Switch_2,i_Switch_3,i_Switch_4;
+	logic	o_Segment2_A;
+	logic	o_Segment2_B;
+	logic	o_Segment2_C;
+	logic	o_Segment2_D;
+	logic	o_Segment2_E;
+	logic	o_Segment2_F;
+	logic	o_Segment2_G;
+	logic	o_Segment1_A;
+	logic	o_Segment1_B;
+	logic	o_Segment1_C;
+	logic	o_Segment1_D;
+	logic	o_Segment1_E;
+	logic	o_Segment1_F;
+	logic	o_Segment1_G;
 
 
 	always #1 r_Clock <= ~r_Clock;

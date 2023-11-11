@@ -1,7 +1,7 @@
 module And_Gate_TB ();
 
-	reg i_Switch_1,i_Switch_2;
-	wire o_LED_1;
+	logic i_Switch_1,i_Switch_2;
+	logic o_LED_1;
   And_Gate UUT
     (.i_Switch_1(i_Switch_1),
      .i_Switch_2(i_Switch_2),

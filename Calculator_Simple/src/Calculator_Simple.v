@@ -33,12 +33,22 @@ module Calculator_Simple #(parameter c_DEBOUNCE_LIMIT = 250000) (
 	
 	logic	[7:0]	w_Segment2 = 8'b00000000;
 	logic	[7:0]	w_Segment1= 8'b00000000;
+	logic	[7:0]	total = 8'b00000000;
+
+	Debounce_Switch #(.c_DEBOUNCE_LIMIT(c_DEBOUNCE_LIMIT)) swDBInst1 (.i_Clk,.i_Switch(i_Switch_1),.o_Switch(w_Switch_1));
+	Debounce_Switch #(.c_DEBOUNCE_LIMIT(c_DEBOUNCE_LIMIT)) swDBInst2 (.i_Clk,.i_Switch(i_Switch_2),.o_Switch(w_Switch_2));
+	Debounce_Switch #(.c_DEBOUNCE_LIMIT(c_DEBOUNCE_LIMIT)) swDBInst3 (.i_Clk,.i_Switch(i_Switch_3),.o_Switch(w_Switch_3));
+	Debounce_Switch #(.c_DEBOUNCE_LIMIT(c_DEBOUNCE_LIMIT)) swDBInst4 (.i_Clk,.i_Switch(i_Switch_4),.o_Switch(w_Switch_4));
 	
-	Debounce_Switch #(.c_DEBOUNCE_LIMIT(c_DEBOUNCE_LIMIT)) swDBInst1 (.i_Clk(i_Clk),.i_Switch(i_Switch_1),.o_Switch(w_Switch_1));
-	Debounce_Switch #(.c_DEBOUNCE_LIMIT(c_DEBOUNCE_LIMIT)) swDBInst2 (.i_Clk(i_Clk),.i_Switch(i_Switch_2),.o_Switch(w_Switch_2));
-	Debounce_Switch #(.c_DEBOUNCE_LIMIT(c_DEBOUNCE_LIMIT)) swDBInst3 (.i_Clk(i_Clk),.i_Switch(i_Switch_3),.o_Switch(w_Switch_3));
-	Debounce_Switch #(.c_DEBOUNCE_LIMIT(c_DEBOUNCE_LIMIT)) swDBInst4 (.i_Clk(i_Clk),.i_Switch(i_Switch_4),.o_Switch(w_Switch_4));
-	
+	always_comb
+	begin
+		total <= i_Switch_3 
+				? r_left + r_right 
+				: i_Switch_4 
+					? r_left * r_right
+					: 0;
+	end
+
 	always @(posedge i_Clk)
 	begin	
 		`onPressed(Switch_1,
@@ -54,15 +64,12 @@ module Calculator_Simple #(parameter c_DEBOUNCE_LIMIT = 250000) (
 				r_right <= r_right + 1;)
 
 		`onPressed(Switch_3,
-			var automatic[7:0] total = r_left + r_right;
 			r_left <= total[3:0];
 			r_right <= total[7:4];)
 
 		`onPressed(Switch_4,
-			var automatic[7:0] total = r_left * r_right;
 			r_left <= total[3:0];
 			r_right <= total[7:4];)
-
 	end
 	
 	Binary_To_7Segment Inst(

@@ -16,13 +16,13 @@ module Segment_Display #(parameter c_DEBOUNCE_LIMIT = 250000) (
 	output	o_Segment1_F,
 	output	o_Segment1_G);
 	
-	wire 		w_Switch_1;
-	reg		r_Switch_1 = 1'b0;
-	reg	[3:0]	r1_Count = 4'b0000;
-	reg	[3:0]	r2_Count = 4'b0000;
+	logic 		w_Switch_1;
+	logic		r_Switch_1 = 1'b0;
+	logic	[3:0]	r1_Count = 4'b0000;
+	logic	[3:0]	r2_Count = 4'b0000;
 	
-	wire	[7:0]	w_Segment2;
-	wire	[7:0]	w_Segment1;
+	logic	[7:0]	w_Segment2;
+	logic	[7:0]	w_Segment1;
 	
 	Debounce_Switch #(.c_DEBOUNCE_LIMIT(c_DEBOUNCE_LIMIT)) 
 	Debounce_Switch_Inst (.i_Clk(i_Clk),.i_Switch(i_Switch_1),.o_Switch(w_Switch_1));

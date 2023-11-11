@@ -1,22 +1,29 @@
-/media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Shared/Debounce_Switch.v {1 {vlog -work work -stats=none /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Shared/Debounce_Switch.v
+/media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Shared/Debounce_Switch.v {1 {vlog -work work -sv -stats=none /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Shared/Debounce_Switch.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module Debounce_Switch
 
 Top level modules:
 	Debounce_Switch
 
-} {} {}} /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Segment_Display/src/Segment_Display.v {1 {vlog -work work -stats=none /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Segment_Display/src/Segment_Display.v
+} {} {}} /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Segment_Display/tests/Segment_Display_TB.v {1 {vlog -work work -sv -stats=none /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Segment_Display/tests/Segment_Display_TB.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module Segment_Display
+-- Compiling module Segment_Display_TB
 
 Top level modules:
-	Segment_Display
+	Segment_Display_TB
 
-} {} {}} /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Segment_Display/src/Binary_To_7Segment.v {1 {vlog -work work -stats=none /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Segment_Display/src/Binary_To_7Segment.v
+} {} {}} /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Shared/Binary_To_7Segment.v {1 {vlog -work work -sv -stats=none /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Shared/Binary_To_7Segment.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module Binary_To_7Segment
 
 Top level modules:
 	Binary_To_7Segment
+
+} {} {}} /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Segment_Display/src/Segment_Display.v {1 {vlog -work work -sv -stats=none /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Segment_Display/src/Segment_Display.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Segment_Display
+
+Top level modules:
+	Segment_Display
 
 } {} {}}

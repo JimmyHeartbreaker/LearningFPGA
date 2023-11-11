@@ -1,10 +1,10 @@
 module Clocked_Logic_TB ();
 
-	reg r_Clock = 1'b0;
+	logic r_Clock = 1'b0;
 
 	always #1 r_Clock <= ~r_Clock;
-	reg i_Switch_1;
-	wire o_LED_1;
+	logic i_Switch_1;
+	logic o_LED_1;
   Clocked_Logic #(.c_DEBOUNCE_LIMIT(50)) UUT
     (	.i_Clk(r_Clock),
 	.i_Switch_1(i_Switch_1),     

@@ -1,4 +1,11 @@
-/media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/And_Gate/src/And_Gate.v {1 {vlog -work work -stats=none /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/And_Gate/src/And_Gate.v
+/media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/And_Gate/tests/And_Gate_TB.v {1 {vlog -work work -sv -stats=none /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/And_Gate/tests/And_Gate_TB.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module And_Gate_TB
+
+Top level modules:
+	And_Gate_TB
+
+} {} {}} /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/And_Gate/src/And_Gate.v {1 {vlog -work work -sv -stats=none /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/And_Gate/src/And_Gate.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module And_Gate
 

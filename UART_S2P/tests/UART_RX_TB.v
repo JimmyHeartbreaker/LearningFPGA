@@ -15,9 +15,9 @@ module UART_RX_TB();
   parameter c_CLKS_PER_BIT    = 217;
   parameter c_BIT_PERIOD      = 8600;
   
-  reg r_Clock = 0;
-  reg r_RX_Serial = 1;
-  wire [7:0] w_RX_Byte;
+  logic r_Clock = 0;  
+  logic r_RX_Serial = 1;
+  logic [7:0] w_RX_Byte;
   
 
   // Takes in input byte and serializes it 
@@ -48,7 +48,7 @@ module UART_RX_TB();
   UART_RX #(.p_CLKs_PB(c_CLKS_PER_BIT)) UART_RX_INST
     (.i_Clk(r_Clock),
      .i_Rx_UART(r_RX_Serial),
-     .o_Rx_Completed(),
+     .o_Rx_State(),
      .o_Rx_Byte(w_RX_Byte)
      );
   

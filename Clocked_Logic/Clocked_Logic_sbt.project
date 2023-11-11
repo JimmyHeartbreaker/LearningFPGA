@@ -7,7 +7,7 @@ NetlistFile=Clocked_Logic_Implmnt/Clocked_Logic.edf
 AdditionalEDIFFile=
 IPEDIFFile=
 DesignLib=Clocked_Logic_Implmnt/sbt/netlist/oadb-Clocked_Logic
-DesignView=_rt
+DesignView=
 DesignCell=Clocked_Logic
 SynthesisSDCFile=Clocked_Logic_Implmnt/Clocked_Logic.scf
 UserPinConstraintFile=
@@ -84,5 +84,5 @@ BitmapSetSecurity=no
 BitmapSetNoUsedIONoPullup=no
 FloorPlannerShowFanInNets=yes
 FloorPlannerShowFanOutNets=yes
-HookTo3rdPartyTextEditor=
+HookTo3rdPartyTextEditor=no
 

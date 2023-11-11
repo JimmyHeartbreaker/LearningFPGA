@@ -1,13 +1,13 @@
 module Switches_To_LEDs_TB ();
 
-	reg i_Switch_1;
-	reg i_Switch_2;
-	reg i_Switch_3;
-	reg i_Switch_4;
-	wire	o_LED_1;
-	wire	o_LED_2;
-	wire	o_LED_3;
-	wire	o_LED_4;
+	logic i_Switch_1;
+	logic i_Switch_2;
+	logic i_Switch_3;
+	logic i_Switch_4;
+	logic	o_LED_1;
+	logic	o_LED_2;
+	logic	o_LED_3;
+	logic	o_LED_4;
 
   Switches_To_LEDs UUT
     (	

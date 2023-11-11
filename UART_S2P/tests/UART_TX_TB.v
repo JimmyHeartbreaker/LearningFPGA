@@ -24,17 +24,17 @@ module UART_TX_TB();
   parameter c_CLKS_PER_BIT    = 217;
   parameter c_BIT_PERIOD      = 8600;
   
-  reg r_Clock = 0;
-  reg[7:0] r_Tx_Byte = 8'b00000101;
-  reg r_Tx_Ready=0;
+  logic r_Clock = 0;
+  logic[7:0] r_Tx_Byte = 8'b00000101;
+  logic r_Tx_Ready=0;
   logic Tx_UART;
   logic Tx2_UART; //2nd write reg
-  wire[7:0] w_Rx_Byte;
-  wire[7:0] w_Rx2_Byte; //2nd read
-  wire w_Tx_Completed;
-  wire w_Tx2_Completed;//2nd write is completed
-  wire w_Rx_State;
-  wire w_Rx2_State; //2nd read state
+  logic[7:0] w_Rx_Byte;
+  logic[7:0] w_Rx2_Byte; //2nd read
+  logic w_Tx_Completed;
+  logic w_Tx2_Completed;//2nd write is completed
+  logic w_Rx_State;
+  logic w_Rx2_State; //2nd read state
 
  //write initial value r_Tx_Byte
   UART_TX #(.p_CLKs_PB(c_CLKS_PER_BIT)) UART_TX_INST
@@ -58,7 +58,7 @@ module UART_TX_TB();
   UART_TX #(.p_CLKs_PB(c_CLKS_PER_BIT)) UART_TX_INST2
     (.i_Clk(r_Clock),
      .i_Tx_Byte(w_Rx_Byte),
-     .i_Tx_Ready(w_Rx_Completed),
+     .i_Tx_Ready(w_Rx_State),
      .o_Tx_Completed(w_Tx2_Completed),
      .o_Tx_UART(Tx2_UART)
      );

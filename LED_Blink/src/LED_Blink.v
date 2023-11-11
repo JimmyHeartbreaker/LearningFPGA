@@ -4,16 +4,16 @@ module LED_Blink
     parameter g_COUNT_2HZ = 6250000,
     parameter g_COUNT_1HZ = 12500000)
   (input  i_Clk,
-   output reg o_LED_1 = 1'b0,
-   output reg o_LED_2 = 1'b0,
-   output reg o_LED_3 = 1'b0,
-   output reg o_LED_4 = 1'b0);
+   output var o_LED_1 = 1'b0,
+   output var o_LED_2 = 1'b0,
+   output var o_LED_3 = 1'b0,
+   output var o_LED_4 = 1'b0);
 
   // These signals will be the counters:
-  reg [31:0] r_Count_10Hz = 0;
-  reg [31:0] r_Count_5Hz  = 0;
-  reg [31:0] r_Count_2Hz  = 0;
-  reg [31:0] r_Count_1Hz  = 0;
+  logic [31:0] r_Count_10Hz = 0;
+  logic [31:0] r_Count_5Hz  = 0;
+  logic [31:0] r_Count_2Hz  = 0;
+  logic [31:0] r_Count_1Hz  = 0;
   
   // All processes toggle a specific signal at a different frequency.
   // They all run continuously

@@ -1,7 +1,7 @@
 // Testbench for LED Blinker
 module LED_Blink_TB ();
 
-  reg r_Clock = 1'b0;
+  logic r_Clock = 1'b0;
 
   always #1 r_Clock <= ~r_Clock;
   

@@ -4,7 +4,7 @@ Version=Lattice Semiconductor Corporation iCEcube - Release: 2020.12.27943 - Bui
 ProjectName=Segment_Display
 Vendor=SiliconBlue
 Synthesis=synplify
-ProjectVFiles=../Shared/Debounce_Switch.v=work,src/Binary_To_7Segment.v=work,src/Segment_Display.v=work
+ProjectVFiles=../Shared/Debounce_Switch.v=work,src/Segment_Display.v=work,../Shared/Binary_To_7Segment.v
 ProjectCFiles=../Constraints/Go_Board_Clock_Constraint.sdc
 CurImplementation=Segment_Display_Implmnt
 Implementations=Segment_Display_Implmnt
@@ -20,7 +20,7 @@ NetlistFile=Segment_Display_Implmnt/Segment_Display.edf
 AdditionalEDIFFile=
 IPEDIFFile=
 DesignLib=Segment_Display_Implmnt/sbt/netlist/oadb-Segment_Display
-DesignView=_rt
+DesignView=
 DesignCell=Segment_Display
 SynthesisSDCFile=Segment_Display_Implmnt/Segment_Display.scf
 UserPinConstraintFile=
@@ -84,5 +84,5 @@ BitmapSetSecurity=no
 BitmapSetNoUsedIONoPullup=no
 FloorPlannerShowFanInNets=yes
 FloorPlannerShowFanOutNets=yes
-HookTo3rdPartyTextEditor=
+HookTo3rdPartyTextEditor=no
 

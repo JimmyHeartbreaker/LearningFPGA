@@ -5,8 +5,8 @@ module Debounce_Switch
 	 output o_Switch);
 
 
-	reg r_State = 1'b0;
-	reg [17:0] r_Count = 0;	
+	logic r_State = 1'b0;
+	logic [17:0] r_Count = 0;	
 
 	always @(posedge i_Clk)
 		begin

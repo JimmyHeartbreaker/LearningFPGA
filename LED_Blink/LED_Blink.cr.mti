@@ -1,15 +1,15 @@
-/media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/LED_Blink/tests/LED_Blink_TB.v {1 {vlog -work work -stats=none /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/LED_Blink/tests/LED_Blink_TB.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module LED_Blink_TB
-
-Top level modules:
-	LED_Blink_TB
-
-} {} {}} /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/LED_Blink/src/LED_Blink.v {1 {vlog -work work -stats=none /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/LED_Blink/src/LED_Blink.v
+/media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/LED_Blink/src/LED_Blink.v {1 {vlog -work work -sv -stats=none /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/LED_Blink/src/LED_Blink.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module LED_Blink
 
 Top level modules:
 	LED_Blink
+
+} {} {}} /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/LED_Blink/tests/LED_Blink_TB.v {1 {vlog -work work -sv -stats=none /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/LED_Blink/tests/LED_Blink_TB.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module LED_Blink_TB
+
+Top level modules:
+	LED_Blink_TB
 
 } {} {}}

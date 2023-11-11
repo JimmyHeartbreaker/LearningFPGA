@@ -7,7 +7,7 @@ NetlistFile=LED_Blink_Implmnt/LED_Blink.edf
 AdditionalEDIFFile=
 IPEDIFFile=
 DesignLib=LED_Blink_Implmnt/sbt/netlist/oadb-LED_Blink
-DesignView=_rt
+DesignView=
 DesignCell=LED_Blink
 SynthesisSDCFile=LED_Blink_Implmnt/LED_Blink.scf
 UserPinConstraintFile=
@@ -84,5 +84,5 @@ BitmapSetSecurity=no
 BitmapSetNoUsedIONoPullup=no
 FloorPlannerShowFanInNets=yes
 FloorPlannerShowFanOutNets=yes
-HookTo3rdPartyTextEditor=
+HookTo3rdPartyTextEditor=no
 
