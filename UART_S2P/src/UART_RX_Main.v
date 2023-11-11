@@ -21,13 +21,13 @@ module UART_RX_Main	#(parameter p_CLKs_PB = 217)( //clocks per bit
 	logic[7:0] w_Segment2;
 	logic[7:0] w_Segment1;
 
-	logic w_Rx_ByteCompleted;
+	logic w_Rx_Completed;
 	logic[7:0] w_Rx_Byte;
 
 	UART_RX #(.p_CLKs_PB(p_CLKs_PB))
 	UartRxInst(
 		.i_Clk(i_Clk),.i_Rx_UART(i_UART_RX),
-		.o_Rx_ByteCompleted(w_Rx_ByteCompleted),.o_Rx_Byte(w_Rx_Byte));
+		.o_Rx_Completed(w_Rx_Completed),.o_Rx_Byte(w_Rx_Byte));
 
 
 	Binary_To_7Segment Bin27Inst2(

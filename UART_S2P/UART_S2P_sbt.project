@@ -4,8 +4,8 @@ Version=Lattice Semiconductor Corporation iCEcube - Release: 2020.12.27943 - Bui
 ProjectName=UART_S2P
 Vendor=SiliconBlue
 Synthesis=synplify
-ProjectVFiles=src/UART_RX.v=work,src/UART_RX_Main.v=work,../Shared/Binary_To_7Segment.v=work
-ProjectCFiles=
+ProjectVFiles=src/UART_RX.v=work,src/UART_RX_Main.v=work,../Shared/Binary_To_7Segment.v=work,src/UART_TX.v
+ProjectCFiles=../Constraints/Go_Board_Clock_Constraint.sdc
 CurImplementation=UART_S2P_Implmnt
 Implementations=UART_S2P_Implmnt
 StartFromSynthesis=yes
@@ -19,9 +19,9 @@ DevicePower=
 NetlistFile=UART_S2P_Implmnt/UART_S2P.edf
 AdditionalEDIFFile=
 IPEDIFFile=
-DesignLib=UART_S2P_Implmnt/sbt/netlist/oadb-UART_RX_Main
+DesignLib=UART_S2P_Implmnt/sbt/netlist/oadb-UART_TX
 DesignView=_rt
-DesignCell=UART_RX_Main
+DesignCell=UART_TX
 SynthesisSDCFile=UART_S2P_Implmnt/UART_S2P.scf
 UserPinConstraintFile=
 UserSDCFile=
