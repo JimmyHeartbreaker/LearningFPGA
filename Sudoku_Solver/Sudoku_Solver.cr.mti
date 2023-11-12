@@ -1,11 +1,4 @@
-/media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Sudoku_Solver/src/Sudoku_Solver.sv {1 {vlog -work work -sv -stats=none /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Sudoku_Solver/src/Sudoku_Solver.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module Sudoku_Solver
-
-Top level modules:
-	Sudoku_Solver
-
-} {} {}} /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Sudoku_Solver/tests/Sudoku_Solver_TB.sv {1 {vlog -work work -sv -stats=none /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Sudoku_Solver/tests/Sudoku_Solver_TB.sv
+/media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Sudoku_Solver/tests/Sudoku_Solver_TB.sv {1 {vlog -work work -sv -stats=none /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Sudoku_Solver/tests/Sudoku_Solver_TB.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module Sudoku_Solver_TB
 
@@ -18,6 +11,13 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 
 Top level modules:
 	UART_RX
+
+} {} {}} /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Sudoku_Solver/src/Sudoku_Grid_Reader.sv {1 {vlog -work work -sv -stats=none /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Sudoku_Solver/src/Sudoku_Grid_Reader.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Sudoku_Grid_Reader
+
+Top level modules:
+	Sudoku_Grid_Reader
 
 } {} {}} /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Shared/UART_TX.v {1 {vlog -work work -sv -stats=none /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Shared/UART_TX.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020

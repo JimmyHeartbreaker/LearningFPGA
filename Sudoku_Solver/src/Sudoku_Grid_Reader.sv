@@ -7,7 +7,7 @@ module Sudoku_Grid_Reader
 	(input i_Clk,
 	 input i_Rx_UART,
          output var o_Read_Completed,
-	 output var [8:0] o_Grid_Nested[2:0][2:0][2:0][2:0]//a nested array representing the 3x3 outer grid at the top and the inner 3x3 grids at the bottom
+	 output var [8:0] o_Grid_Nested[2:0][2:0][2:0][2:0] = '{default:0}//a nested array representing the 3x3 outer grid at the top and the inner 3x3 grids at the bottom
 );
 	 
 	logic w_Rx_Completed;
@@ -16,8 +16,9 @@ module Sudoku_Grid_Reader
 	logic [3:0] r_Grid_X=0;
 	logic [3:0] r_Grid_Y=0;
 
-	logic signed [2:0] index_mappingTop [8:0];
-	logic signed [2:0] index_mappingBottom [8:0];
+
+	logic signed [2:0] mapping_Outer [8:0];
+	logic signed [2:0] mapping_Inner [8:0];
 
 	// read the bit stream
 	UART_RX #(.p_CLKs_PB(p_CLKs_PB)) 
@@ -28,54 +29,54 @@ module Sudoku_Grid_Reader
 			.o_Rx_Byte(w_Rx_Byte));
 	//setup mapping table to convert from X,Y to Outer,Inner,Left,Center,Right
 	initial begin
-		index_mappingTop[0] = -1;
-		index_mappingBottom[0] = -1;
+		mapping_Outer[0] = -1;
+		mapping_Inner[0] = -1;
 
-		index_mappingTop[1] = -1;
-		index_mappingBottom[1] = 0;
+		mapping_Outer[1] = -1;
+		mapping_Inner[1] = 0;
 
-		index_mappingTop[2] = -1;
-		index_mappingBottom[2] = 1;
+		mapping_Outer[2] = -1;
+		mapping_Inner[2] = 1;
 
-		index_mappingTop[3] = 0;
-		index_mappingBottom[3] = -1;
+		mapping_Outer[3] = 0;
+		mapping_Inner[3] = -1;
 
-		index_mappingTop[4] = 0;
-		index_mappingBottom[4] = 0;
+		mapping_Outer[4] = 0;
+		mapping_Inner[4] = 0;
 
-		index_mappingTop[5] = 0;
-		index_mappingBottom[5] = 1;
+		mapping_Outer[5] = 0;
+		mapping_Inner[5] = 1;
 
-		index_mappingTop[6] = 1;
-		index_mappingBottom[6] = -1;
+		mapping_Outer[6] = 1;
+		mapping_Inner[6] = -1;
 
-		index_mappingTop[7] = 1;
-		index_mappingBottom[7] = 0;
+		mapping_Outer[7] = 1;
+		mapping_Inner[7] = 0;
 
-		index_mappingTop[8] = 1;
-		index_mappingBottom[8] = 1;
+		mapping_Outer[8] = 1;
+		mapping_Inner[8] = 1;
 	end
 
 	always @(posedge w_Rx_Completed)
 	begin
-		if(w_Rx_Byte - 48 && (w_Rx_Byte - 48) < 10)
-			o_Grid_Nested[index_mappingTop[r_Grid_X]+1][index_mappingTop[r_Grid_Y]+1][index_mappingBottom[r_Grid_X]+1][index_mappingBottom[r_Grid_Y]+1][w_Rx_Byte - 49] <= 1; 
-		else if	(w_Rx_Byte - 48 >= 10)
+		if((w_Rx_Byte - 48) < 10)
+			o_Grid_Nested[mapping_Outer[r_Grid_X]+1][mapping_Outer[r_Grid_Y]+1][mapping_Inner[r_Grid_X]+1][mapping_Inner[r_Grid_Y]+1][w_Rx_Byte - 49] <= (w_Rx_Byte - 48>0); 
+		else 
 			$display("Invalid characeter entered into sudoku board");
+		
+			
 		if(r_Grid_X == 8)
 		begin
+			if(r_Grid_Y==8)
+				o_Read_Completed <= 1;
 			r_Grid_X <= 0;
 			r_Grid_Y <= r_Grid_Y + 1;
-		end 
-		else if(r_Grid_Y==8)
-		begin
-			o_Read_Completed <= 1;
-		end
+		end 		
 		else
 			r_Grid_X <= r_Grid_X + 1;
 		
 	end
-	
+
 
 	
 endmodule 
