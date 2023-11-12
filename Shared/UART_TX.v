@@ -20,7 +20,7 @@ module UART_TX
 		case(r_State)
 			IDLE : //no signal to send, 
 			begin
-				if(i_Tx_Ready)
+				if(i_Tx_Ready && !o_Tx_Completed)
 					r_State <= START_BIT;
 				else
 					o_Tx_Completed <= 0;	
