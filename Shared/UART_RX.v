@@ -15,7 +15,7 @@ module UART_RX
   	parameter END_BIT = 3'b011;
 
 	logic [3:0] r_State = IDLE;
-	logic [7:0] r_Count_Clk = 1;
+	logic [7:0] r_Count_Clk =0;
 	logic [3:0] r_Index_Bit = 4'b0;
 
 	always @(posedge i_Clk)

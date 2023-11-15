@@ -4,7 +4,7 @@ Version=Lattice Semiconductor Corporation iCEcube - Release: 2020.12.27943 - Bui
 ProjectName=Sudoku_Solver
 Vendor=SiliconBlue
 Synthesis=synplify
-ProjectVFiles=src/Sudoku_Solver.sv=work,src/Sudoku_Grid_Reader.sv=work,../Shared/UART_RX.v=work,../Shared/UART_TX.v=work
+ProjectVFiles=src/Sudoku_Solver.sv=work,src/Sudoku_Grid_Reader.sv=work,../Shared/UART_RX.v=work,../Shared/UART_TX.v=work,src/Techniques/Scanner2.sv=work
 ProjectCFiles=../Constraints/Go_Board_Clock_Constraint.sdc
 CurImplementation=Sudoku_Solver_Implmnt
 Implementations=Sudoku_Solver_Implmnt
@@ -19,9 +19,9 @@ DevicePower=
 NetlistFile=Sudoku_Solver_Implmnt/Sudoku_Solver.edf
 AdditionalEDIFFile=
 IPEDIFFile=
-DesignLib=Sudoku_Solver_Implmnt/sbt/netlist/oadb-UART_TX
+DesignLib=Sudoku_Solver_Implmnt/sbt/netlist/oadb-Sudoku_Solver
 DesignView=
-DesignCell=UART_TX
+DesignCell=Sudoku_Solver
 SynthesisSDCFile=Sudoku_Solver_Implmnt/Sudoku_Solver.scf
 UserPinConstraintFile=
 UserSDCFile=

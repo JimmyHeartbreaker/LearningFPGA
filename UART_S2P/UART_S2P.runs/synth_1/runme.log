@@ -1,0 +1,53 @@
+
+*** Running vivado
+    with args -log UART_RX_Main.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source UART_RX_Main.tcl
+
+
+****** Vivado v2023.2 (64-bit)
+  **** SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+  **** IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+  **** SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source UART_RX_Main.tcl -notrace
+Command: synth_design -top UART_RX_Main -part xc7a12ticsg325-1L
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a12ti'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a12ti'
+INFO: [Device 21-403] Loading part xc7a12ticsg325-1L
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 29652
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1993.531 ; gain = 403.660 ; free physical = 13553 ; free virtual = 23275
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-11065] parameter 'IDLE' becomes localparam in 'UART_RX' with formal parameter declaration list [/media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Shared/UART_RX.v:12]
+WARNING: [Synth 8-11065] parameter 'START_BIT' becomes localparam in 'UART_RX' with formal parameter declaration list [/media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Shared/UART_RX.v:13]
+WARNING: [Synth 8-11065] parameter 'READ' becomes localparam in 'UART_RX' with formal parameter declaration list [/media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Shared/UART_RX.v:14]
+WARNING: [Synth 8-11065] parameter 'END_BIT' becomes localparam in 'UART_RX' with formal parameter declaration list [/media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Shared/UART_RX.v:15]
+WARNING: [Synth 8-11065] parameter 'IDLE' becomes localparam in 'UART_TX' with formal parameter declaration list [/media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Shared/UART_TX.v:9]
+WARNING: [Synth 8-11065] parameter 'START_BIT' becomes localparam in 'UART_TX' with formal parameter declaration list [/media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Shared/UART_TX.v:10]
+WARNING: [Synth 8-11065] parameter 'WRITE' becomes localparam in 'UART_TX' with formal parameter declaration list [/media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Shared/UART_TX.v:11]
+WARNING: [Synth 8-11065] parameter 'END_BIT' becomes localparam in 'UART_TX' with formal parameter declaration list [/media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Shared/UART_TX.v:12]
+INFO: [Synth 8-6157] synthesizing module 'UART_RX_Main' [/media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/UART_S2P/src/UART_Main.v:1]
+INFO: [Synth 8-6157] synthesizing module 'UART_RX' [/media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Shared/UART_RX.v:1]
+	Parameter p_CLKs_PB bound to: 217 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'UART_RX' (0#1) [/media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Shared/UART_RX.v:1]
+ERROR: [Synth 8-11365] for the instance 'UART_RX_INST' of module 'UART_RX' declared at '/media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Shared/UART_RX.v:1', named port connection 'o_Rx_State' does not exist [/media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/UART_S2P/src/UART_Main.v:33]
+WARNING: [Synth 8-7071] port 'o_Rx_Started' of module 'UART_RX' is unconnected for instance 'UART_RX_INST' [/media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/UART_S2P/src/UART_Main.v:31]
+WARNING: [Synth 8-7071] port 'o_Rx_Completed' of module 'UART_RX' is unconnected for instance 'UART_RX_INST' [/media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/UART_S2P/src/UART_Main.v:31]
+WARNING: [Synth 8-7023] instance 'UART_RX_INST' of module 'UART_RX' has 5 connections declared, but only 3 given [/media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/UART_S2P/src/UART_Main.v:31]
+INFO: [Synth 8-6157] synthesizing module 'UART_TX' [/media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Shared/UART_TX.v:1]
+	Parameter p_CLKs_PB bound to: 217 - type: integer 
+ERROR: [Synth 8-6156] failed synthesizing module 'UART_TX' [/media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Shared/UART_TX.v:1]
+ERROR: [Synth 8-6156] failed synthesizing module 'UART_RX_Main' [/media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/UART_S2P/src/UART_Main.v:1]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2066.500 ; gain = 476.629 ; free physical = 13451 ; free virtual = 23173
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+INFO: [Common 17-83] Releasing license: Synthesis
+10 Infos, 11 Warnings, 0 Critical Warnings and 4 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Tue Nov 14 23:29:19 2023...

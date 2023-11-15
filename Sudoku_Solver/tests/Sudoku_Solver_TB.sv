@@ -4,14 +4,16 @@ module Sudoku_Solver_TB #(parameter p_CLKs_PB = 217)();
 
 	logic r_Clk = 1'b0;
 	logic[7:0] r_Tx_Byte = 8'b0;
+	logic[7:0] w_Rx_Byte;
 	logic r_Tx_Ready=0;
 	logic w_Tx_Completed;
-	logic w_UART;
+	logic w_Rx_Completed;
+	logic w_Rx_UART;
+	logic w_Tx_UART;
 	
 	always #1 r_Clk <= ~r_Clk;
 	
-	logic i_Rx_UART;
-	logic [3:0] w_Grid_Nested[2:0][2:0][2:0][2:0];
+	logic i_Rx_UART=1;
 
 	string puzzle1 = "\
 801920300\
@@ -23,6 +25,9 @@ module Sudoku_Solver_TB #(parameter p_CLKs_PB = 217)();
 900300680\
 683190050\
 000000013";
+
+
+
 	string puzzle1Sln = "\
 871926345\
 349851726\
@@ -33,29 +38,30 @@ module Sudoku_Solver_TB #(parameter p_CLKs_PB = 217)();
 915342687\
 683197254\
 427568913";
-	//write byte to get it into serial form
 	UART_TX #(.p_CLKs_PB(p_CLKs_PB)) 
 	UartTxInst (.i_Clk(r_Clk),
 	 .i_Tx_Byte(r_Tx_Byte),	
 	 .i_Tx_Ready(r_Tx_Ready),	
 	 .o_Tx_Completed(w_Tx_Completed), 
-	 .o_Tx_UART(w_UART));
+	 .o_Tx_UART(w_Rx_UART));
 
-	 //wire the output of writing to the input of reading
  	
   	
- logic solved=0;
 
 	Sudoku_Solver #(.p_CLKs_PB(p_CLKs_PB)) 
 	Sudoku_Solver_Inst(.i_Clk(r_Clk),
-			.i_Rx_UART(w_UART),
-			.solved,
-			.o_Grid_Nested(w_Grid_Nested));
+			.i_Rx_UART(w_Rx_UART),
+			.o_Tx_UART(w_Tx_UART));
 
- logic [1:0] xOuter;
- logic [1:0] yOuter;
- logic [1:0] xInner;
- logic [1:0] yInner;
+	UART_RX #(.p_CLKs_PB(p_CLKs_PB)) 
+	UART_RX_Inst(.i_Clk(r_Clk),
+			.i_Rx_UART(w_Tx_UART),
+			.o_Rx_Completed(w_Rx_Completed),
+			.o_Rx_Started(),
+			.o_Rx_Byte(w_Rx_Byte));
+
+
+ 
  
   initial 
     begin
@@ -65,23 +71,24 @@ module Sudoku_Solver_TB #(parameter p_CLKs_PB = 217)();
 	begin
 		r_Tx_Byte = puzzle1[i];
 		r_Tx_Ready = 1;
-		@(negedge w_Tx_Completed);
-		
+		if(i<81)
+			@(negedge w_Tx_Completed);
 	end
 
-	@(posedge solved);
 	foreach(puzzle1Sln[i])
 	begin
 		$display(i);
-		if(w_Grid_Nested[(i/3)%3][(i/27)][(i%3)][(i%27)/9] !== (puzzle1Sln[i]-48))
-			$display("incorrect");
-		else
-			$display("correct");		
+		@(negedge w_Rx_Completed);
+		if(w_Rx_Byte !== (puzzle1Sln[i]))
+		begin
+			$display(w_Rx_Byte);
+			$display("sudoku sln does not match");
+		end
+			
 	end
-      	$display("Done");
-    	$stop();
+	$stop();
     end
-  
+
   initial 
   begin
     // Required to dump signals to EPWave
