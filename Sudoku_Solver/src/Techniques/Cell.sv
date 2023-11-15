@@ -18,15 +18,21 @@ module Cell
 	logic [3:0] index=0;
 	logic [3:0] prev_index=0;
 	
-	logic [8:0] box=0;
+	logic [8:0] box;
 	logic [8:0] r=0;
-	
+	logic [8:0] i_Rows_Agg [2:0];
+	logic [8:0] i_Cols_Agg [2:0];
 
-	always_comb
-	begin
-		box =  i_Inner[0] | i_Inner[1] | i_Inner[2] | i_Inner[3] | i_Inner[4] | i_Inner[5] | i_Inner[6] | i_Inner[7] | i_Inner[8];	
-	end
 	
+	assign i_Rows_Agg[0] = orBits(i_Rows[0]);
+	assign i_Rows_Agg[1] = orBits(i_Rows[1]);
+	assign i_Rows_Agg[2] = orBits(i_Rows[2]);
+
+	assign i_Cols_Agg[0] = orBits(i_Cols[0]);
+	assign i_Cols_Agg[1] = orBits(i_Cols[1]);
+	assign i_Cols_Agg[2] = orBits(i_Cols[2]);
+
+	assign box =  i_Inner[0] | i_Inner[1] | i_Inner[2] | i_Inner[3] | i_Inner[4] | i_Inner[5] | i_Inner[6] | i_Inner[7] | i_Inner[8];	
 	assign o_Complete = !(~box);
 
 	always @(posedge i_Clk)
@@ -42,7 +48,7 @@ module Cell
 		
 		if(!i_Inner[index] )  
 		begin		
-			r <= ~( box |  orBits(i_Rows[index/3]) | orBits(i_Cols[index%3]));			
+			r <= ~( box |  i_Rows_Agg[index/3] | i_Cols_Agg[index%3]);			
 		end
 		else 
 		begin

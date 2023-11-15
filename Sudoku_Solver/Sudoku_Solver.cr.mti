@@ -35,13 +35,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	UART_TX
 
-} {} {}} /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Sudoku_Solver/src/Techniques/Cell.sv {1 {vlog -work work -sv -stats=none /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Sudoku_Solver/src/Techniques/Cell.sv
+} {} {}} /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Sudoku_Solver/src/Techniques/Scanner2.sv {1 {vlog -work work -sv -stats=none /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Sudoku_Solver/src/Techniques/Scanner2.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module Cell
-** Note: /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Sudoku_Solver/src/Techniques/Cell.sv(15): (vlog-13177) Promoting concatenation '{default:0}' to an assignment pattern:  Named element found.
+-- Compiling module Scanner
 
 Top level modules:
-	Cell
+	Scanner
 
 } {} {}} /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Sudoku_Solver/tests/Scanner2_TB.sv {2 {vlog -work work -sv -stats=none /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Sudoku_Solver/tests/Scanner2_TB.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020

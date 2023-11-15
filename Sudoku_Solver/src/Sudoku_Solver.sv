@@ -52,7 +52,7 @@ module Sudoku_Solver
 		begin			
 			if((!r_Grid_X && !r_Grid_Y) || w_Tx_Completed)
 			begin
-				if(r_Grid_X < 9 && r_Grid_Y < 9)
+				if(r_Grid_Y < 9)
 				begin
 					r_Tx_Byte <= bcd_encoder(w_Grid[r_Grid_X/3][r_Grid_Y/3][(r_Grid_X%3) + (r_Grid_Y%3)*3])+48;	
 					r_Tx_Ready <= 1;	

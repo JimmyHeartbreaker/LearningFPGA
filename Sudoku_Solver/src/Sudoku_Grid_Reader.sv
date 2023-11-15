@@ -7,9 +7,8 @@ module Sudoku_Grid_Reader
 	#(parameter p_CLKs_PB = 217) //clocks per bit
 	(input i_Clk,
 	 input i_Rx_UART,
-        output var o_Read_Completed=0,
-	 output var [8:0] o_Grid[8:0][8:0]={default:0}//a nested array representing the 3x3 outer grid at the top and the inner 3x3 grids at the bottom
-);
+        output var o_Read_Completed,
+	 output var [8:0] o_Grid[8:0][8:0]={default:0});
 	 
 	logic w_Rx_Completed;
 	logic [7:0] w_Rx_Byte;
@@ -25,11 +24,9 @@ module Sudoku_Grid_Reader
 			.o_Rx_Started(),
 			.o_Rx_Byte(w_Rx_Byte));
 	
-	always_comb
-	begin
-		o_Read_Completed = r_Grid_Y>8; 
-
-	end
+	
+	assign o_Read_Completed = r_Grid_Y>8; 	
+	
 	always @(posedge w_Rx_Completed)
 	begin
 		
