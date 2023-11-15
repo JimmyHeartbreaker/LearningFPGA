@@ -1,7 +1,7 @@
 /*
-Author: James Hardaker
-Description: A Sudoku Module that takes a UART serial input and reads off 81 numeric characters representing a sudoku board
-and places them into a 3x3 x 3x3 array with 9 bits per element (BCD)
+Sudoku Grid Reader Module
+A Sudoku Module that takes a UART serial input and reads off 81 numeric characters representing a sudoku board
+and places them into a 9x9 array with 9 bits per element (BCD)
 */
 module Sudoku_Grid_Reader
 	#(parameter p_CLKs_PB = 217) //clocks per bit

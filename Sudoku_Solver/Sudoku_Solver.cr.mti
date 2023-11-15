@@ -12,6 +12,15 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	UART_RX
 
+} {} {}} /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Sudoku_Solver/src/Sudoku_Solver.sv {2 {vlog -work work -sv -stats=none /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Sudoku_Solver/src/Sudoku_Solver.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Sudoku_Solver
+** Warning: /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Sudoku_Solver/src/Sudoku_Solver.sv(46): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+** Note: /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Sudoku_Solver/src/Sudoku_Solver.sv(28): (vlog-13177) Promoting concatenation '{default:0}' to an assignment pattern:  Named element found.
+
+Top level modules:
+	Sudoku_Solver
+
 } {} {}} /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Sudoku_Solver/src/Sudoku_Grid_Reader.sv {1 {vlog -work work -sv -stats=none /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Sudoku_Solver/src/Sudoku_Grid_Reader.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module Sudoku_Grid_Reader
@@ -27,20 +36,26 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	UART_TX
 
-} {} {}} /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Sudoku_Solver/tests/Cell_TB.sv {2 {vlog -work work -sv -stats=none /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Sudoku_Solver/tests/Cell_TB.sv
+} {} {}} /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Sudoku_Solver/src/Techniques/Cell.sv {1 {vlog -work work -sv -stats=none /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Sudoku_Solver/src/Techniques/Cell.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Cell
+** Note: /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Sudoku_Solver/src/Techniques/Cell.sv(15): (vlog-13177) Promoting concatenation '{default:0}' to an assignment pattern:  Named element found.
+
+Top level modules:
+	Cell
+
+} {} {}} /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Sudoku_Solver/tests/Cell_TB.sv {1 {vlog -work work -sv -stats=none /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Sudoku_Solver/tests/Cell_TB.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module Cell_TB
-** Warning: /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Sudoku_Solver/tests/Cell_TB.sv(37): (vlog-2182) 'iteration' might be read before written in always_comb or always @* block.
 
 Top level modules:
 	Cell_TB
 
-} {} {}} /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Sudoku_Solver/tests/Scanner2_TB.sv {2 {vlog -work work -sv -stats=none /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Sudoku_Solver/tests/Scanner2_TB.sv
+} {} {}} /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Sudoku_Solver/src/Techniques/Scanner2.sv {1 {vlog -work work -sv -stats=none /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Sudoku_Solver/src/Techniques/Scanner2.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module Scanner2_TB
-** Warning: /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Sudoku_Solver/tests/Scanner2_TB.sv(46): (vlog-2182) 'iteration' might be read before written in always_comb or always @* block.
+-- Compiling module Scanner
 
 Top level modules:
-	Scanner2_TB
+	Scanner
 
 } {} {}}

@@ -1,3 +1,6 @@
+/*UART TX Module
+Create a byte and outputs a serial stream
+*/
 module UART_TX
 	#(parameter p_CLKs_PB = 217) //clocks per bit
 	(input i_Clk,

@@ -8,11 +8,12 @@
 
 
 
+add_file -verilog -lib work "src/Techniques/Scanner2.sv" 
+add_file -verilog -lib work "src/Techniques/Cell.sv" 
 add_file -verilog -lib work "src/Sudoku_Solver.sv" 
 add_file -verilog -lib work "src/Sudoku_Grid_Reader.sv" 
 add_file -verilog -lib work "../Shared/UART_RX.v" 
 add_file -verilog -lib work "../Shared/UART_TX.v" 
-add_file -verilog -lib work "src/Techniques/Scanner2.sv" 
 add_file -constraint -lib work "../Constraints/Go_Board_Clock_Constraint.sdc"
 #implementation: "Sudoku_Solver_Implmnt"
 impl -add Sudoku_Solver_Implmnt -type fpga

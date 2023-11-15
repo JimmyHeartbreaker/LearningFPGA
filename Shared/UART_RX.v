@@ -1,3 +1,6 @@
+/*UART RX Module
+Create a serial stream and outputs a byte
+*/
 module UART_RX
 	#(parameter p_CLKs_PB = 217) //clocks per bit
 	(input i_Clk,

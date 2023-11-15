@@ -1,3 +1,5 @@
+/*Sudoku Solver module
+a simple solver than just scans the horizontal, vertical and 3x3 gri*/
 module Sudoku_Solver
 	#(parameter p_CLKs_PB = 217) //clocks per bit
 	(input i_Clk,
@@ -50,7 +52,7 @@ module Sudoku_Solver
 	always @(posedge i_Clk)
 	begin
 		if(w_Is_Complete)
-		begin					
+		begin			
 			if((!r_Grid_X && !r_Grid_Y) || w_Tx_Completed)
 			begin
 				if(r_Grid_X < 9 && r_Grid_Y < 9)

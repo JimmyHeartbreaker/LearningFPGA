@@ -76,18 +76,6 @@ module Sudoku_Solver_TB #(parameter p_CLKs_PB = 217)();
 	end
 	r_Tx_Ready = 0;
 	r_Tx_Byte =0;
-	/*foreach(puzzle1Sln[i])
-	begin
-		$display(i);
-		@(negedge w_Rx_Completed);
-		if(w_Rx_Byte !== (puzzle1Sln[i]))
-		begin
-			$display(w_Rx_Byte);
-			$display("sudoku sln does not match");
-		end
-			
-	end
-	$stop();*/
 
 
 	end
