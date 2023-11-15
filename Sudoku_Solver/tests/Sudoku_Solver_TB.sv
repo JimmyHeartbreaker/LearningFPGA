@@ -74,7 +74,8 @@ module Sudoku_Solver_TB #(parameter p_CLKs_PB = 217)();
 		if(i<81)
 			@(negedge w_Tx_Completed);
 	end
-
+	r_Tx_Ready = 0;
+	r_Tx_Byte =0;
 	foreach(puzzle1Sln[i])
 	begin
 		$display(i);

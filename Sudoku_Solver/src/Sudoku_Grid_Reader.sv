@@ -25,54 +25,19 @@ module Sudoku_Grid_Reader
 			.o_Rx_Started(),
 			.o_Rx_Byte(w_Rx_Byte));
 	
-	function automatic [2:0] MapOuter([3:0] outer);
-		case(outer)		
-			4'b0000,
-			4'b0001,
-			4'b0010: return 0;
-			4'b0011,
-			4'b0100,
-			4'b0101: return 1;
-			4'b0110, 
-			4'b0111, 
-			4'b1000: return 2;
-			default: return 0;
-		endcase
-	endfunction
-	function automatic [2:0] MapInner([3:0] outer);
-		case(outer)		
-			4'b0111,
-			4'b0100,
-			4'b0001: return 1;
-			4'b1000,
-			4'b0101,
-			4'b0010: return 2;
-			4'b0110,
-			4'b0000,
-			4'b0011: return 0;
-			default: return 0;
-		endcase
-	endfunction
+	always_comb
+	begin
+		o_Read_Completed = r_Grid_Y>8; 
+
+	end
 	always @(posedge w_Rx_Completed)
-	begin		
-		if((w_Rx_Byte - 48) < 10)
-			o_Grid[r_Grid_X][r_Grid_Y][w_Rx_Byte - 49] <= (w_Rx_Byte - 48)>0; 
-		else 
-			$display("Invalid characeter entered into sudoku board");		
-			
+	begin
+		
+		o_Grid[r_Grid_X][r_Grid_Y][w_Rx_Byte-49] <= w_Rx_Byte-48>0;				
 		if(r_Grid_X == 8)
-		begin
-			if(r_Grid_Y==8)
-			begin
-				r_Grid_X <= 0;
-				r_Grid_Y <= 0;
-				o_Read_Completed <= 1;
-			end
-			else
-			begin
-				r_Grid_X <= 0;
-				r_Grid_Y <= r_Grid_Y + 1;
-			end
+		begin			
+			r_Grid_X <= 0;
+			r_Grid_Y <= r_Grid_Y + 1;			
 		end 		
 		else
 			r_Grid_X <= r_Grid_X + 1;		
