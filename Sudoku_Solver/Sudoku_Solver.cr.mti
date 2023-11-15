@@ -12,13 +12,13 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	UART_RX
 
-} {} {}} /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Sudoku_Solver/src/Sudoku_Solver.sv {1 {vlog -work work -sv -stats=none /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Sudoku_Solver/src/Sudoku_Solver.sv
+} {} {}} /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Sudoku_Solver/src/Sudoku_Grid_Reader.sv {1 {vlog -work work -sv -stats=none /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Sudoku_Solver/src/Sudoku_Grid_Reader.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module Sudoku_Solver
-** Note: /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Sudoku_Solver/src/Sudoku_Solver.sv(28): (vlog-13177) Promoting concatenation '{default:0}' to an assignment pattern:  Named element found.
+-- Compiling module Sudoku_Grid_Reader
+** Note: /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Sudoku_Solver/src/Sudoku_Grid_Reader.sv(11): (vlog-13177) Promoting concatenation '{default:0}' to an assignment pattern:  Named element found.
 
 Top level modules:
-	Sudoku_Solver
+	Sudoku_Grid_Reader
 
 } {} {}} /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Shared/UART_TX.v {1 {vlog -work work -sv -stats=none /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Shared/UART_TX.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
@@ -42,14 +42,5 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 
 Top level modules:
 	Scanner2_TB
-
-} {} {}} /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Sudoku_Solver/src/Techniques/Scanner2.sv {1 {vlog -work work -sv -stats=none /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Sudoku_Solver/src/Techniques/Scanner2.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module Cell
-** Note: /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Sudoku_Solver/src/Techniques/Scanner2.sv(8): (vlog-13177) Promoting concatenation '{default:0}' to an assignment pattern:  Named element found.
--- Compiling module Scanner
-
-Top level modules:
-	Scanner
 
 } {} {}}

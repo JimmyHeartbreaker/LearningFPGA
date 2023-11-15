@@ -25,13 +25,11 @@ module Cell
 	
 	always @(posedge i_Clk)
 	begin
-	    
-
-	    if( oneHot(r)) 
-	    begin
-		o_Inner[prev_index] <= r;	
-		r<=0;
-            end
+	    	if( oneHot(r)) 
+	    	begin
+			o_Inner[prev_index] <= r;	
+			r<=0;
+  	        end
 	    
 	    
 		if(x<2)

@@ -76,7 +76,7 @@ module Sudoku_Solver_TB #(parameter p_CLKs_PB = 217)();
 	end
 	r_Tx_Ready = 0;
 	r_Tx_Byte =0;
-	foreach(puzzle1Sln[i])
+	/*foreach(puzzle1Sln[i])
 	begin
 		$display(i);
 		@(negedge w_Rx_Completed);
@@ -87,9 +87,32 @@ module Sudoku_Solver_TB #(parameter p_CLKs_PB = 217)();
 		end
 			
 	end
-	$stop();
-    end
+	$stop();*/
 
+
+	end
+
+  	logic [10:0] j=0;
+	always @(posedge w_Rx_Completed)
+	begin
+		if(j<81)
+		begin
+		if(w_Rx_Byte !== (puzzle1Sln[j]))
+		begin
+			$display(j);
+			$display(w_Rx_Byte-48);
+			$display("sudoku sln does not match");
+		end
+		j <= j+1;
+		end
+		else
+			$stop();
+		
+	end
+	
+    
+
+	
   initial 
   begin
     // Required to dump signals to EPWave
