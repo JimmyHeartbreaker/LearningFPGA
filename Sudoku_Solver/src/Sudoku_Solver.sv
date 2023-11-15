@@ -40,11 +40,8 @@ module Sudoku_Solver
 		for(gv_X =0;gv_X < 9;gv_X = gv_X + 1)
 		begin
 			for(gv_Y =0;gv_Y < 9;gv_Y = gv_Y + 1)
-			begin
-				always_comb
-				begin
-					r_Grid[gv_X][gv_Y] = w_Grid_Initial[gv_X][gv_Y] | w_Grid[gv_X/3][gv_Y/3][(gv_X%3) + (gv_Y%3)*3];
-				end
+			begin				
+				assign r_Grid[gv_X][gv_Y] = w_Grid_Initial[gv_X][gv_Y] | w_Grid[gv_X/3][gv_Y/3][(gv_X%3) + (gv_Y%3)*3];				
 			end
 		end
 	endgenerate

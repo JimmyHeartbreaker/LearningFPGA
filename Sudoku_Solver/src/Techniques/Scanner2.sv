@@ -3,17 +3,14 @@ Creates 9 Cell sub modules, maps the input/output grid to/from them and reports 
 */
 module Scanner	
 	(input i_Clk,
-	
-	input [8:0] i_Grid[8:0][8:0],	
-			
+	input [8:0] i_Grid[8:0][8:0],				
 	 output var o_Complete, 
 	 output var [8:0] o_Grid[2:0][2:0][8:0] = '{default:0});
 	 logic r_complete1, r_complete2, r_complete3, r_complete4, r_complete5, r_complete6, r_complete7, r_complete8, r_complete9;
 	 
-	always_comb
-	begin
-		o_Complete = r_complete1 && r_complete2 && r_complete3 && r_complete4 && r_complete5 && r_complete6 && r_complete7 && r_complete8 && r_complete9;
-	end
+	
+	assign o_Complete = r_complete1 && r_complete2 && r_complete3 && r_complete4 && r_complete5 && r_complete6 && r_complete7 && r_complete8 && r_complete9;
+	
 				Cell c1(.i_Clk(i_Clk),.o_Complete(r_complete1),.
 					i_Rows(
 					     {{i_Grid[3][2],

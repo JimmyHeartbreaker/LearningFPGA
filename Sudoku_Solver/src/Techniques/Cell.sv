@@ -11,11 +11,10 @@ module Cell
 	 input [8:0] i_Rows [2:0][5:0],
 	 input [8:0] i_Cols [2:0][5:0],
 	 input [8:0] i_Inner [8:0],		
-	 output var o_Complete=0, 
+	 output o_Complete, 
 	 output var [8:0] o_Inner [8:0]={default:0}
 	 );
-	logic [1:0] x=0;
-	logic [1:0] y=0;
+
 	logic [3:0] index=0;
 	logic [3:0] prev_index=0;
 	
@@ -25,11 +24,11 @@ module Cell
 
 	always_comb
 	begin
-		box =  i_Inner[0] | i_Inner[1] | i_Inner[2] | i_Inner[3] | i_Inner[4] | i_Inner[5] | i_Inner[6] | i_Inner[7] | i_Inner[8];		
-		o_Complete = !(~box);
+		box =  i_Inner[0] | i_Inner[1] | i_Inner[2] | i_Inner[3] | i_Inner[4] | i_Inner[5] | i_Inner[6] | i_Inner[7] | i_Inner[8];	
 	end
 	
-	
+	assign o_Complete = !(~box);
+
 	always @(posedge i_Clk)
 	begin
 		if( oneHot(r)) 
@@ -43,7 +42,7 @@ module Cell
 		
 		if(!i_Inner[index] )  
 		begin		
-			r <= ~(   box |  orBits(i_Rows[index/3]) | orBits(i_Cols[index%3]));			
+			r <= ~( box |  orBits(i_Rows[index/3]) | orBits(i_Cols[index%3]));			
 		end
 		else 
 		begin
@@ -52,7 +51,7 @@ module Cell
 		end
 
 		prev_index <= index;
-	    
+	    	
 	end
 	
 	
