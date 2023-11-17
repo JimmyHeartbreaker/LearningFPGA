@@ -7,15 +7,16 @@ module Sudoku_Grid_Reader
 	#(parameter p_CLKs_PB = 217) //clocks per bit
 	(input i_Clk,
 	 input i_Rx_UART,
-        output var o_Read_Completed,
-	 output var [8:0] o_Grid[8:0][8:0]={default:0});
+	 input i_Reset,
+         output var o_Read_Completed,
+	 output var [8:0] o_Grid[8:0][8:0]);
 	 
 	logic w_Rx_Completed;
 	logic [7:0] w_Rx_Byte;
 	
-	logic [3:0] r_Grid_X=0;
-	logic [3:0] r_Grid_Y=0;
-
+	logic [3:0] r_Grid_X,x;
+	logic [3:0] r_Grid_Y,y;
+	
 	// read the bit stream
 	UART_RX #(.p_CLKs_PB(p_CLKs_PB)) 
 	SGR_UART_RX_Inst(.i_Clk(i_Clk),
@@ -25,18 +26,30 @@ module Sudoku_Grid_Reader
 			.o_Rx_Byte(w_Rx_Byte));
 	
 	
-	assign o_Read_Completed = r_Grid_Y>8; 	
+	assign o_Read_Completed = r_Grid_Y>8; 
 	
-	always @(posedge w_Rx_Completed)
+	
+	always @(posedge w_Rx_Completed,posedge i_Reset)
 	begin
-		
-		o_Grid[r_Grid_X][r_Grid_Y][w_Rx_Byte-49] <= w_Rx_Byte-48>0;				
-		if(r_Grid_X == 8)
+		if(i_Reset === 1)
 		begin			
-			r_Grid_X <= 0;
-			r_Grid_Y <= r_Grid_Y + 1;			
-		end 		
+			for(x=0;x<9;x=x+1)
+				for(y=0;y<9;y=y+1)
+					o_Grid[x][y] <= 0;
+			
+			r_Grid_X<=0;
+			r_Grid_Y<=0;
+		end
 		else
-			r_Grid_X <= r_Grid_X + 1;		
+		begin
+			o_Grid[r_Grid_X][r_Grid_Y][w_Rx_Byte-49] <= w_Rx_Byte-48>0;				
+			if(r_Grid_X == 8)
+			begin			
+				r_Grid_X <= 0;
+				r_Grid_Y <= r_Grid_Y + 1;			
+			end 		
+			else
+				r_Grid_X <= r_Grid_X + 1;		
+		end
 	end	
 endmodule 

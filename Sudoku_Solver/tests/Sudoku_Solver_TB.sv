@@ -46,10 +46,11 @@ module Sudoku_Solver_TB #(parameter p_CLKs_PB = 217)();
 	 .o_Tx_UART(w_Rx_UART));
 
  	
-  	
+  	logic r_Switch_1 = 1;
 
 	Sudoku_Solver #(.p_CLKs_PB(p_CLKs_PB)) 
 	Sudoku_Solver_Inst(.i_Clk(r_Clk),
+			.i_Switch_1(r_Switch_1),
 			.i_Rx_UART(w_Rx_UART),
 			.o_Tx_UART(w_Tx_UART));
 
@@ -66,13 +67,14 @@ module Sudoku_Solver_TB #(parameter p_CLKs_PB = 217)();
   initial 
     begin
       	$display("Starting Testbench...");
-	
+	#100;
+	r_Switch_1 <= 0;
 	foreach(puzzle1[i])
 	begin
 		r_Tx_Byte = puzzle1[i];
 		r_Tx_Ready = 1;
 		if(i<81)
-			@(negedge w_Tx_Completed);
+			@(posedge w_Tx_Completed);
 	end
 	r_Tx_Ready = 0;
 	r_Tx_Byte =0;

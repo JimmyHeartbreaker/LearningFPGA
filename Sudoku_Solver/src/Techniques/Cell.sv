@@ -11,14 +11,15 @@ module Cell
 	 input [8:0] i_Rows_Agg [2:0],
 	 input [8:0] i_Cols_Agg [2:0],
 	 input [8:0] i_Inner [8:0],	
-	 output o_Complete, 
-	 output var [8:0] o_Inner [8:0]={default:0}
+         input i_Reset,
+	 output o_Complete, 		
+	 output var [8:0] o_Inner [8:0]
 	 );
 
-	logic [3:0] index=0;
-	logic [3:0] prev_index=0;
+	logic [3:0] index;
+	logic [3:0] prev_index;
 	
-	logic [8:0] r=0;
+	logic [8:0] r;
 	logic [8:0] box;
 	assign box =  i_Inner[0] | i_Inner[1] | i_Inner[2] | i_Inner[3] | i_Inner[4] | i_Inner[5] | i_Inner[6] | i_Inner[7] | i_Inner[8];	
 	assign o_Complete = !(~box);
@@ -31,18 +32,20 @@ module Cell
   	        end
 		
 	    	index <= index + 1;
-	    	if(index>8)
+	    	if(index>8 || i_Reset)
 			index <= 0;
 		
-		if(!i_Inner[index] )  
+		if(i_Inner[index]===0 )  
 		begin		
 			r <= ~( box |  i_Rows_Agg[index/3] | i_Cols_Agg[index%3]);			
 		end
-		else 
+		else if(i_Inner[index])
 		begin
 			o_Inner[index] <=  i_Inner[index];	
 			r<=0;
 		end
+		else
+			o_Inner[index] <= 0;
 
 		prev_index <= index;
 	    	

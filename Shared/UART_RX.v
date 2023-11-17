@@ -8,18 +8,18 @@ module UART_RX
 	//0 = idle, 1 = 1st bit read,  2 = complete, 
 	//by having this tri state the test is able to 
 	//overlap the writer with the reader for maximum performance
-	 output var o_Rx_Started = 0, 
-	 output var o_Rx_Completed = 0, 
-	 output var [7:0] o_Rx_Byte = 0);
+	 output var o_Rx_Started, 
+	 output var o_Rx_Completed, 
+	 output var [7:0] o_Rx_Byte);
 
- 	parameter IDLE = 3'b000;
- 	parameter START_BIT = 3'b001;
-  	parameter READ = 3'b010;
-  	parameter END_BIT = 3'b011;
+ 	parameter IDLE = 3'b00;
+ 	parameter START_BIT = 3'b01;
+  	parameter READ = 3'b10;
+  	parameter END_BIT = 3'b11;
 
-	logic [3:0] r_State = IDLE;
-	logic [7:0] r_Count_Clk =0;
-	logic [3:0] r_Index_Bit = 4'b0;
+	logic [1:0] r_State;
+	logic [7:0] r_Count_Clk;
+	logic [2:0] r_Index_Bit;
 
 	always @(posedge i_Clk)
 	begin	 
@@ -31,7 +31,7 @@ module UART_RX
 				if (!i_Rx_UART)//wait for low 
 				begin
 					o_Rx_Byte <= 0;
-					r_Index_Bit <=  4'b0;
+					r_Index_Bit <=  0;
 					r_Count_Clk <= 1;
 					r_State <= START_BIT;					
 				end			   	
@@ -77,7 +77,10 @@ module UART_RX
 				else
 					r_Count_Clk <= r_Count_Clk + 1;
 			end
-			default : begin  end
+			default : 
+			begin  
+				r_State <= IDLE;
+			end
 		endcase		
 	end
 	
