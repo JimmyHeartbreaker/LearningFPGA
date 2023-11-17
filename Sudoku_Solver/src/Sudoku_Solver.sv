@@ -27,7 +27,7 @@ module Sudoku_Solver
 	
 	logic [8:0] r_Grid[8:0][8:0] = {default:0};
 	logic [8:0] w_Grid [2:0][2:0][8:0];
-	Scanner sInst(.i_Clk,.o_Complete(w_Is_Complete),.i_Grid(r_Grid),.o_Grid(w_Grid));
+	Scanner sInst(.i_Clk,.o_Complete(w_Is_Complete),.g(r_Grid),.o_Grid(w_Grid));
 
 	logic [3:0] r_Grid_X=0;
 	logic [3:0] r_Grid_Y=0;
