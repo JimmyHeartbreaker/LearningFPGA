@@ -33,13 +33,6 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	Cell
 
-} {} {}} /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Sudoku_Solver/src/Techniques/Scanner2.sv {1 {vlog -work work -sv -stats=none /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Sudoku_Solver/src/Techniques/Scanner2.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module Scanner
-
-Top level modules:
-	Scanner
-
 } {} {}} /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Sudoku_Solver/tests/Scanner2_TB.sv {2 {vlog -work work -sv -stats=none /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Sudoku_Solver/tests/Scanner2_TB.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module Scanner2_TB
@@ -54,5 +47,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 
 Top level modules:
 	Cell_TB
+
+} {} {}} /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Sudoku_Solver/src/Techniques/Scanner2.sv {1 {vlog -work work -sv -stats=none /media/jimmyheartbreaker/UDATA/_REPOS/LearningFPGA/Sudoku_Solver/src/Techniques/Scanner2.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Scanner
+
+Top level modules:
+	Scanner
 
 } {} {}}

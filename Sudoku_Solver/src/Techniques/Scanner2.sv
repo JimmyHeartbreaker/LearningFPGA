@@ -6,7 +6,7 @@ module Scanner
 	input [8:0] g[8:0][8:0],	
 	input i_Reset,			
 	 output var o_Complete, 
-	 output var [8:0] o_Grid[2:0][2:0][8:0] = '{default:0});
+	 output var [8:0] o_Grid[2:0][2:0][8:0] );
 	 logic [8:0] r_complete;
 	 
 	
@@ -42,7 +42,7 @@ module Scanner
 			localparam x = i*3;
 			localparam y = j * 3;
 
-			logic [8:0] r_TopC,r_CenterC,r_BottomC,r_LeftC,r_MiddleC,r_RightC;
+			logic [8:0] r_TopC,r_CenterC,r_BottomC,r_LeftC,r_MiddleC,r_RightC,box;
 			
 			assign r_TopC = r_TopM[j*3 + ((i+1)%3)] | r_TopM[j*3 +((i+2)%3)];
 			assign r_CenterC = r_CenterM[j*3 +((i+1)%3)] | r_CenterM[j*3 +((i+2)%3)];
@@ -51,8 +51,10 @@ module Scanner
 			assign r_LeftC = r_LeftM[((j+1)%3) * 3 + i] | r_LeftM[((j+2)%3) * 3 + i] ;
 			assign r_MiddleC = r_MiddleM[((j+1)%3) * 3 + i] | r_MiddleM[((j+2)%3) * 3 + i] ;
 			assign r_RightC = r_RightM[((j+1)%3) * 3+ i] | r_RightM[((j+2)%3) * 3 + i] ;
+			assign box = r_TopM[j*3 + ((i)%3)] |  r_CenterM[j*3 +((i)%3)] | r_BottomM[j*3 +((i)%3)] ;
+			assign r_complete[j*3+i] = !(~box);
 
-			Cell c1(.i_Clk(i_Clk),.o_Complete(r_complete[j*3+i]),
+			Cell c1(.i_Clk(i_Clk),.box(box),
 					.i_Rows_Agg({r_BottomC, r_CenterC,r_TopC}),
 				     	.i_Cols_Agg({r_RightC,r_MiddleC, r_LeftC}),
 					.i_Reset(i_Reset),

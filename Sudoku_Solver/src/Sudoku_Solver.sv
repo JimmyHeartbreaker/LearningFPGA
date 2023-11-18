@@ -14,11 +14,11 @@ module Sudoku_Solver
 	Sudoku_Grid_Reader_Inst(.i_Clk,.i_Rx_UART(i_Rx_UART),
 				.o_Read_Completed(),.i_Reset(i_Switch_1),.o_Grid(w_Grid_Initial));
 	
-	logic[7:0] r_Tx_Byte;
+	logic[3:0] r_Tx_Byte;
 	logic r_Tx_Ready;
 	UART_TX #(.p_CLKs_PB(p_CLKs_PB)) 
 	UART_TX_Inst(.i_Clk(i_Clk),
-			.i_Tx_Byte(r_Tx_Byte),	
+			.i_Tx_Byte(r_Tx_Byte | 8'b00110000),	
 			.i_Tx_Ready(r_Tx_Ready),
 			.o_Tx_Completed(w_Tx_Completed),
 			.o_Tx_UART);
@@ -41,10 +41,8 @@ module Sudoku_Solver
 		for(gv_X =0;gv_X < 9;gv_X = gv_X + 1)
 		begin
 			for(gv_Y =0;gv_Y < 9;gv_Y = gv_Y + 1)
-			begin			
-				
-					assign r_Grid[gv_X][gv_Y] =  w_Grid_Initial[gv_X][gv_Y] | w_Grid[gv_X/3][gv_Y/3][(gv_X%3) + (gv_Y%3)*3] ;	
-					
+			begin							
+				assign r_Grid[gv_X][gv_Y] =  w_Grid_Initial[gv_X][gv_Y] | w_Grid[gv_X/3][gv_Y/3][(gv_X%3) + (gv_Y%3)*3] ;						
 			end
 		end
 	endgenerate
@@ -62,7 +60,7 @@ module Sudoku_Solver
 			begin
 				if(r_Grid_Y < 9)
 				begin
-					r_Tx_Byte <= bcd_encoder(r_Grid[r_Grid_X][r_Grid_Y])+48;	
+					r_Tx_Byte <= bcd_encoder(r_Grid[r_Grid_X][r_Grid_Y]) ;	
 					r_Tx_Ready <= 1;	
 				end
 			
@@ -89,9 +87,9 @@ module Sudoku_Solver
 	function logic[3:0] bcd_encoder(logic[8:0] in);
 		
         	casez(in)
-            		9'b000000000: return 0;
-      			9'b000000001: return 1;
-       			9'b000000010: return 2;
+            		9'b000000000, 
+      			9'b000000001,
+       			9'b000000010: return in;
        			9'b000000100: return 3;
        			9'b000001000: return 4;
        			9'b000010000: return 5;

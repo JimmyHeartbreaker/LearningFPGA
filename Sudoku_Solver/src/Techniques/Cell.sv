@@ -11,8 +11,8 @@ module Cell
 	 input [8:0] i_Rows_Agg [2:0],
 	 input [8:0] i_Cols_Agg [2:0],
 	 input [8:0] i_Inner [8:0],	
-         input i_Reset,
-	 output o_Complete, 		
+	 input [8:0] box,
+         input i_Reset,	
 	 output var [8:0] o_Inner [8:0]
 	 );
 
@@ -20,9 +20,7 @@ module Cell
 	logic [3:0] prev_index;
 	
 	logic [8:0] r;
-	logic [8:0] box;
-	assign box =  i_Inner[0] | i_Inner[1] | i_Inner[2] | i_Inner[3] | i_Inner[4] | i_Inner[5] | i_Inner[6] | i_Inner[7] | i_Inner[8];	
-	assign o_Complete = !(~box);
+	
 
 	always @(posedge i_Clk)
 	begin
@@ -32,20 +30,32 @@ module Cell
   	        end
 		
 	    	index <= index + 1;
-	    	if(index>8 || i_Reset)
+	    	if(index==8 )
 			index <= 0;
 		
-		if(i_Inner[index]===0 )  
+		if(!i_Inner[index] )  
 		begin		
 			r <= ~( box |  i_Rows_Agg[index/3] | i_Cols_Agg[index%3]);			
 		end
-		else if(i_Inner[index])
+		else 
 		begin
 			o_Inner[index] <=  i_Inner[index];	
 			r<=0;
 		end
-		else
-			o_Inner[index] <= 0;
+		
+		if(i_Reset)
+		begin
+			o_Inner[0] <= 0;
+			o_Inner[1] <= 0;
+			o_Inner[2] <= 0;
+			o_Inner[3] <= 0;
+			o_Inner[4] <= 0;
+			o_Inner[5] <= 0;
+			o_Inner[6] <= 0;
+			o_Inner[7] <= 0;
+			o_Inner[8] <= 0;
+			index <= 0;
+		end
 
 		prev_index <= index;
 	    	
@@ -56,7 +66,4 @@ module Cell
 		return  (in && !(in & (in-1)));
 	endfunction
 
-	function automatic [8:0] orBits([8:0] in [5:0]);
-		return   in[0]  | in[1]  | in[2]  | in[3]  | in[4]  | in[5];
-	endfunction
 endmodule 

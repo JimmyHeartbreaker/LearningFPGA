@@ -14,8 +14,8 @@ module Sudoku_Grid_Reader
 	logic w_Rx_Completed;
 	logic [7:0] w_Rx_Byte;
 	
-	logic [3:0] r_Grid_X,x;
-	logic [3:0] r_Grid_Y,y;
+	logic [3:0] r_Grid_X;
+	logic [3:0] r_Grid_Y;
 	
 	// read the bit stream
 	UART_RX #(.p_CLKs_PB(p_CLKs_PB)) 
@@ -29,18 +29,18 @@ module Sudoku_Grid_Reader
 	assign o_Read_Completed = r_Grid_Y>8; 
 	
 	
-	always @(posedge w_Rx_Completed,posedge i_Reset)
+	always @(posedge i_Clk )
 	begin
-		if(i_Reset === 1)
+		if(i_Reset)
 		begin			
-			for(x=0;x<9;x=x+1)
-				for(y=0;y<9;y=y+1)
+			for(int x=0;x<9;x=x+1)
+				for(int y=0;y<9;y=y+1)
 					o_Grid[x][y] <= 0;
 			
 			r_Grid_X<=0;
 			r_Grid_Y<=0;
 		end
-		else
+		else if( w_Rx_Completed)
 		begin
 			o_Grid[r_Grid_X][r_Grid_Y][w_Rx_Byte-49] <= w_Rx_Byte-48>0;				
 			if(r_Grid_X == 8)
